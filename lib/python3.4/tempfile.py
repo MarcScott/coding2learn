@@ -1,0 +1,5 @@
+XSym
+0100
+fb0e476228fb7ce88559a07ecbe85b53
+/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/tempfile.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

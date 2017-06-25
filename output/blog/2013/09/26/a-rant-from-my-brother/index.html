@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A rant from my brother &mdash; Coding 2 Learn</title>
+  <meta name="author" content="Marc Scott">
+
+  <link href="http://coding2learn.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Coding 2 Learn Atom Feed" />
+  <link href="http://coding2learn.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Coding 2 Learn RSS Feed" />
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="http://coding2learn.org/favicon.png" rel="icon">
+
+  <link href="http://coding2learn.org/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://coding2learn.org/">Coding 2 Learn</a></h1>
+    <h2>Education and Technology Ramblings with a little Politics for good measure.</h2>
+</hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://coding2learn.org/feeds/all.atom.xml" rel="subscribe-atom">Atom</a></li>
+  <li><a href="http://coding2learn.org/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
+</ul>
+
+
+<ul class="main-navigation">
+    <li><a href="/archives.html">Archives</a></li>
+    <li><a href="http://coding2learn.org">Blog</a></li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div>
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">A rant from my brother</h1>
+    <p class="meta">
+<time datetime="2013-09-26T19:03:00+01:00" pubdate>Thu 26 September 2013</time>    </p>
+</header>
+
+  <div class="entry-content"><p>My brother is the reason I learned to code. To be honest, he's probably forgotten more about programming than I'll ever know, and I'm not exaggerating. His preferred languages are Haskell and OCaml, but he's recently had to dive into Javascript for a project he's working on. I received this email from him tonight, and I found it amusing so I thought I'd share it. (Note - he talks about Python a lot as it's the language I understand the most.)</p>
+<p>Javascript is pretty pathetic when it comes to bug-finding. Here's some Python:</p>
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; foo = {}
+&gt;&gt;&gt; foo[&quot;bar&quot;] = 3
+&gt;&gt;&gt; foo[&quot;baz&quot;]
+</pre></div>
+
+
+<p>The dictionary foo doesn't have a key "baz", and this is likely a typo. Python sensibly throws an error, and execution will not continue.</p>
+<p>In Javascript:</p>
+<div class="highlight"><pre><span></span>&gt;&gt; var foo = {};
+&gt;&gt; foo[&quot;bar&quot;] = 3;
+&gt;&gt; foo[&quot;baz&quot;]
+</pre></div>
+
+
+<p>This does not throw any errors, but instead returns undefined. This is not entirely retarded, until we find that Javascript happily coerces undefined to NaN (Not a Number) whenever it appears in arithmetic expressions. Since NaN is a valid floating point number, it can happily propagate through running code. Things go from entirely retarded to completely fucking braindead when we find that Javascript will accept NaN as an argument in most functions:</p>
+<div class="highlight"><pre><span></span>ctx.fillRect(NaN,NaN,NaN,NaN)
+</pre></div>
+
+
+<p>In other words, what started out as a typo which would have Python raise an error at the earliest possible opportunity is silently ignored by Javascript, only to be found if one notices certain rectangles not being drawn. Tracking down such a typo from a bit of missing graphics is going to be a pain in the arse.</p>
+<p>Now functions: Javascript has no time for conventions of mathematics, programming, or basic sanity. In Javascript, any function can be passed <em>any</em> number of arguments without raising an error. The concept of arity be damned. Extra arguments in Javascript are ignored. Missing arguments are set to undefined. And, as explained before, undefined will be coerced to NaN in arithmetic expressions to create lots of great bug-full code when you forget the number of arguments required of a function. For further hilarity, undefined can be used as a key to a dictionary. So if you do:</p>
+<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">insert</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">dict</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+   <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>and you accidentally call insert(3), you won't be told, as you would be in Python, that you are missing a required argument. Instead, x gets bound to undefined, and the dictionary will be become</p>
+<div class="highlight"><pre><span></span>{ undefined : 3 }
+</pre></div>
+
+
+<p>That's almost certainly an unexpected behaviour.</p>
+<p>The way that function parameters are interpreted leads to this truly bizarre example, which I got from another site:</p>
+<div class="highlight"><pre><span></span>[&#39;10&#39;,&#39;10&#39;,&#39;10&#39;,&#39;10&#39;,&#39;10&#39;].map(parseInt)
+</pre></div>
+
+
+<p>this yields the truly <em>weird</em></p>
+<div class="highlight"><pre><span></span>[10,NaN,2,3,4]
+</pre></div>
+
+
+<p>The function <em>map</em> is supposed to apply its argument to every value in a list. In sane languages, </p>
+<div class="highlight"><pre><span></span>[x,x,x,x,x].map(f)
+</pre></div>
+
+
+<p>should give you the list</p>
+<div class="highlight"><pre><span></span>[f(x),f(x),f(x),f(x),f(x)]
+</pre></div>
+
+
+<p>In Javascript, for likely dumbfuck reasons, map takes a function of three arguments. The first argument is bound to the element in the list. The second argument is bound to the index into the list. The third argument is bound to the entire list. This will cause surprise when you don't know exactly how many arguments the argument to map is expecting (parseInt in this case), but don't expect a prompt error in case of mistakes, as you would get in Python.</p>
+<p>It turns out that, in this case, parseInt takes an optional second argument which is the base in which the first argument is to be interpreted. For unexplored reasons, when the base is 0, the argument is read in base 10. In base 1, NaN is always returned. This explains the first two elements in</p>
+<div class="highlight"><pre><span></span>[10,NaN,2,3,4]
+</pre></div>
+
+
+<p>The third element is "10" in base 2. The fourth element is "10" in base 3. The last element is 10 in base 4</p>
+<p>Ridiculous.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Marc Scott
+    </span>
+  </span>
+<time datetime="2013-09-26T19:03:00+01:00" pubdate>Thu 26 September 2013</time>  <span class="categories">
+    <a class='category' href='http://coding2learn.org/category/misc.html'>misc</a>
+  </span>
+</p><div class="sharing">
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coding2learn.org/blog/2013/09/26/a-rant-from-my-brother/" data-via="coding2learn" data-counturl="http://coding2learn.org/blog/2013/09/26/a-rant-from-my-brother/" >Tweet</a>
+  <div class="g-plusone" data-size="medium"></div>
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+
+<section>
+    <a href="http://twitter.com/coding2learn" class="twitter-follow-button" data-show-count="true">Follow @coding2learn</a>
+</section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2017/06/11/dear-theresa/">Dear Theresa,</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/10/23/every-lesson-should-be-a-hackathon/">Every Lesson Should Be A Hackathon</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/08/08/one-year-on/">One Year On</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/05/18/computer-games-are-a-waste-of-time/">Computer Games Are A Waste Of Time</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/04/14/please-stop-sending-me-your-shitty-word-documents/">Please stop sending me your shitty Word documents</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li><a href="http://coding2learn.org/category/misc.html">misc</a></li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = 'http://coding2learn.org/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'MarcScott',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="http://coding2learn.org/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+  
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2012&ndash;2017  Marc Scott &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="http://coding2learn.org/theme/js/modernizr-2.0.js"></script>
+  <script src="http://coding2learn.org/theme/js/ender.js"></script>
+  <script src="http://coding2learn.org/theme/js/octopress.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.coding2learn.org/piwik/" : "http://www.coding2learn.org/piwik/");
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script>
+    <noscript><p><img src="//www.coding2learn.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

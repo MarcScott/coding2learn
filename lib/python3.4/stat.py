@@ -1,0 +1,5 @@
+XSym
+0096
+d2ae065c9cd996af07ec41b806550dc6
+/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/stat.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

@@ -1,0 +1,5 @@
+XSym
+0103
+382a8d3da964488c90d648c011adbb76
+/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/rlcompleter.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

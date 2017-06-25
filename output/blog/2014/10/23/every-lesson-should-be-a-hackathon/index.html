@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Every Lesson Should Be A Hackathon &mdash; Coding 2 Learn</title>
+  <meta name="author" content="Marc Scott">
+
+  <link href="http://coding2learn.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        title="Coding 2 Learn Atom Feed" />
+  <link href="http://coding2learn.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+        title="Coding 2 Learn RSS Feed" />
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="http://coding2learn.org/favicon.png" rel="icon">
+
+  <link href="http://coding2learn.org/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://coding2learn.org/">Coding 2 Learn</a></h1>
+    <h2>Education and Technology Ramblings with a little Politics for good measure.</h2>
+</hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://coding2learn.org/feeds/all.atom.xml" rel="subscribe-atom">Atom</a></li>
+  <li><a href="http://coding2learn.org/feeds/all.rss.xml" rel="subscribe-rss">RSS</a></li>
+</ul>
+
+
+<ul class="main-navigation">
+    <li><a href="/archives.html">Archives</a></li>
+    <li><a href="http://coding2learn.org">Blog</a></li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div>
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">Every Lesson Should Be A Hackathon</h1>
+    <p class="meta">
+<time datetime="2014-10-23T18:00:00+01:00" pubdate>Thu 23 October 2014</time>    </p>
+</header>
+
+  <div class="entry-content"><p><em>a note for readers outside of the UK. Year 10 students are equivalent to 8th-grade in the US</em></p>
+<p>This year I wanted to do things differently. It was an experiment; one that could go disastrously wrong, and nearly did, but I was determined to go ahead. Let me explain.</p>
+<p>I could teach GCSE Computer Science quite easily using our Windows network and with Python installed on each computer. The kids could use IDLE to create their scripts, and compose their coursework in Microsoft Word. They'd still get to learn everything they needed for their exams. They'd still get to learn the Python language. They'd get to write-up their coursework ready for submission to the exam board. But it just didn't feel right.</p>
+<p>I quit teaching Physics and Chemistry a few years ago because I felt I was working at an exam factory. I love Science, and I loved teaching it, but when the pressures of achieving higher and higher grades began to affect the way I taught my lessons, I began to hate the subject. I distinctly remember a student in an A-level class asking me about the particle nature of light. I desperately wanted to launch the lesson on a tangent and talk about the oddities of single-photon diffraction, then segue into a talk about Einstein's elevator thought experiment regarding a gravitational field's effect on a photon, then maybe quickly visit Schrodinger's Cat. Instead I ploughed on with my lesson plan, distinctly aware of the content I had to get through before they sat their next module exam the following month. I never want to do the same with my new found passion - Computing.</p>
+<p>I'm not a hacker, I'm a teacher. I've only been coding for three years, and everyday I feel a little more overwhelmed by how much there is to still learn. Some days I feel like a God, as I wrangle with some new JavaScript library and manage to bend it to my will. Other days I feel like a complete beginner as no matter how much I try and how much Googling I do, I still can't get Emacs to parse my init file without flagging up a million errors. I wish I'd discovered it all earlier in life, maybe if I had I'd be able to scan through the articles on the front page of Hacker News and understand more than about one in ten.</p>
+<p>I want my students to have the opportunities which I let pass me by. I want them to feel like they're hackers. I want them to know that they are unique, and that out of all the students in the school, only they know the secrets of how computers and software really work. I want them to be able to sit down at a machine and bash away at their keyboards while others look on confused and amazed by what they are seeing.</p>
+<p>So in September when my fresh-faced, Year 10, CS students showed up for their first lesson, we embarked on an experiment. We started slowly. We spent a couple of weeks writing some introductory content for their coursework, drew some flowcharts and wrote a little pseudo-code and a couple of Python functions. It was all fairly standard stuff, and we had the type of lessons you'd see in any GCSE CS class up and down the country. We stopped however, as soon as we had a little code, a few images and some content to work with. Then we spent the next four weeks focusing on work-flow. That's twelve lessons where we ignored the Computer Science syllabus, wrote no code whatsoever and learned nothing of syntax, algorithms or CS theory.</p>
+<p>Instead my students learned how to launch an instance of a Ubuntu Virtual Machine on our OpenStack server. They learned how to access the VM using Putty, learned how to create a new superuser, navigate around the file system, install software and updates using apt-get, edit their .bashrc files to create aliases that allowed them to mount their Windows home folders that resided on the main network.</p>
+<p>Next they learned about Emacs. I taught them a few basic commands so that they could open and save files, navigate around a little, write some scripts in Python-mode and run them in an interpreter in a separate buffer. They learned how to write in markdown, and how to create links and images in a mysterious file that I insisted they all call README.md</p>
+<p>Lastly we set up GitHub accounts. They all forked a repository that I had created for them, pulled it down to their VMs and then learned how to add files, commit changes and push those changes back up to GitHub.</p>
+<p>It wasn't easy. There was total confusion at first, and blank, unsmiling faces. Passwords were a nightmare. They had to have one for the OpenStack server, one for their VM, and another for GitHub. I launched into one of my rants when I watched a student use the password 'qwertyuiop1234567890', and another rant when a second student told me that 'GitHub is a stupid website' because it temporarily blocked our IP address when they tried to login with an incorrect password more than three times. Trying to explain that this was a security feature and not a bug to a fourteen year old from the SnapChat generation wasn't simple. We had teething issues with our VMs, and many of the instances had to be deleted, new images created, and new instances launched. There was reluctance to use Emacs in a terminal, when they had perfectly adequate tools on their Windows clients for writing text, and where they could use a mouse to navigate. They encountered problems with git, including merge errors, which we patiently sorted out (often by just backing up the repo, cloning again and then re-adding the files (I'm no git guru)).</p>
+<p>At one point I thought I'd lost them. I lay awake at night wondering what the hell I'd done. I thought I must be the only Computer Science teacher in the country that had managed to turn an entire class of students off the subject in one fell swoop. I worried that they'd never recover, and that they'd be dreading coming to my lessons where they'd get yet another hour of indecipherable instruction on using tools in which they saw no value.</p>
+<p>Then a hackathon came to the rescue. A few in the class have been coding a couple of years, and had heard about the <a href="https://www.youtube.com/watch?v=xCBOUsWZTUw&amp;list=UUBYaqTVeO-oQW2AlmZVj-Fg">MLH LaunchHack</a>, and said they wanted to go. In a rush I organised a trip. I had four girls in the class that wanted to come, so I needed a female member of staff to accompany me. I sent out an email.</p>
+<blockquote>
+<p>Do any female members of staff fancy coming down to London with a class of teenagers for 24 hours of coding without sleep? There'll probably be free pizza.</p>
+</blockquote>
+<p>The free pizza did the trick and I got my volunteer.</p>
+<p>I can't thank <a href="https://twitter.com/jna_sh">Joe Nash</a> of <a href="http://mlh.io/">MLH</a> enough for all the efforts he went to ensure under 18s were catered for. The hackathon was amazing, and probably deserves a blog post all of it's own. The three kids that could code got on with building stuff, while the others sat confused for awhile until I showed them <a href="http://www.codecademy.com/">Codecademy</a>, and then they just sat down and started to learn. It was the atmosphere we were in that did it; surrounded by hackers with their IDEs filling their screens and bashing out scripts as fast as they could manage. The hackathon swag was top notch, as was the free food and drink, all helping to buoy the kids up and encourage them to get involved. Even the teacher, of English, I had brought with us got into the spirit of it all. She spent the first couple of hours writing poetry resources for school, then the next thing I knew she too was on Codecademy and must have put in a record-breaking stint on the site, logging about 18 continuous hours, before she got bored of it and switched over to <a href="http://learnpythonthehardway.org">Learn Python the Hard way</a>.</p>
+<p>All of the kids managed to build something, with a little or a lot of help from me. After 24 hours of no sleep, they got to present their apps to the hackers and see what others had built.</p>
+<p>My next CS lesson couldn't have gone better. They were hackers now, and their new-found enthusiasm rubbed off onto the rest of the class, all of whom suddenly wanted to come to the next hackathon. They fired up their VMs, logged in with Putty and just got to work. They even started coming in at lunch, and bringing none CS students with them. It was comical to watch one lad, bash away at a python script in Emacs, while either side of him his friends emulated him on <a href="http://hackertyper.net/">HackerTyper</a></p>
+<p>I now have a class of students who code and write up their coursework in Emacs then submit it to me via a pull request on GitHub. Marking has become a doddle. I can view the diffs, make comments and then accept the requests. More than that though, I have a group of students who are now part of a small and elite group. They use Linux. They use the terminal. They use Emacs and git. When they sit at a computer to work, others look on perplexed at screens full of indecipherable text and confused by the lack of mouse activity. They're not just Computer Science students anymore, they call themselves hackers and are proud of the moniker.</p>
+<p>What's next? We've still got some issues with OpenStack that need resolving, such as syncing with Active Directory and external access via SSH rather than through the web-console. Once they're resolved, I'm going to start earlier. I'll get my Year 7s using Linux and writing their scripts in nano, Year 8s using Emacs and learning markdown, my Year 9s using git and submitting work on GitHub. It's going to take some time, but I'm determined to make it work.</p>
+<p>I know it's not on the syllabus, and I know there'll be no exam questions on version control or terminal text-editors. I don't care. For me, the time investment was worth it. My lessons now feel less like a class and more like mini-hackathons. The kids seem more motivated, more independent and the work I now set them seems paltry in comparison to everything they have already accomplished. In a post I wrote over a year ago I said I wanted to 'build a nation of hackers' and now in my own small way, I've started.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Marc Scott
+    </span>
+  </span>
+<time datetime="2014-10-23T18:00:00+01:00" pubdate>Thu 23 October 2014</time>  <span class="categories">
+    <a class='category' href='http://coding2learn.org/category/misc.html'>misc</a>
+  </span>
+</p><div class="sharing">
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coding2learn.org/blog/2014/10/23/every-lesson-should-be-a-hackathon/" data-via="coding2learn" data-counturl="http://coding2learn.org/blog/2014/10/23/every-lesson-should-be-a-hackathon/" >Tweet</a>
+  <div class="g-plusone" data-size="medium"></div>
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+
+<section>
+    <a href="http://twitter.com/coding2learn" class="twitter-follow-button" data-show-count="true">Follow @coding2learn</a>
+</section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2017/06/11/dear-theresa/">Dear Theresa,</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/10/23/every-lesson-should-be-a-hackathon/">Every Lesson Should Be A Hackathon</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/08/08/one-year-on/">One Year On</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/05/18/computer-games-are-a-waste-of-time/">Computer Games Are A Waste Of Time</a>
+      </li>
+      <li class="post">
+          <a href="http://coding2learn.org/blog/2014/04/14/please-stop-sending-me-your-shitty-word-documents/">Please stop sending me your shitty Word documents</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li><a href="http://coding2learn.org/category/misc.html">misc</a></li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = 'http://coding2learn.org/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'MarcScott',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="http://coding2learn.org/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+  
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2012&ndash;2017  Marc Scott &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="http://coding2learn.org/theme/js/modernizr-2.0.js"></script>
+  <script src="http://coding2learn.org/theme/js/ender.js"></script>
+  <script src="http://coding2learn.org/theme/js/octopress.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.coding2learn.org/piwik/" : "http://www.coding2learn.org/piwik/");
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script>
+    <noscript><p><img src="//www.coding2learn.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

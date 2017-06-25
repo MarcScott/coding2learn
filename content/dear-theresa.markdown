@@ -1,0 +1,201 @@
+Title: Dear Theresa,
+date: 2017-06-11
+slug: dear-theresa
+
+I haven't written anything here for a couple of years, but recent events have inspired me to once again touch fingers to keyboard, in the hope that you might read this.
+
+What I'd like to talk to you about is **encryption**. Wait a second... Please keep reading. I know the subject can sound dull and overly technical. I recognise that you may have been told it's too difficult to understand for the layperson. You might even have been led to believe that encryption is the reason terrorists can get away with atrocities. However, If you give me just 15 minutes or so of your time, then I'm sure you'll be better informed about what encryption is, and I'll also tell you how you can go about ensuring that encryption never again thwarts the country's security services. What have you got to lose?
+
+## What is Encryption?
+
+Encryption is simply hiding information so that only an authorised individual can read it. Here's a simple analogy. if you want to send a message to your friend Robert, then you could buy yourself a metal box with a padlock. The padlock has two keys. One key you keep and the other you give to Robert. This way you can write a message, lock it in the box, and send the box to Robert, knowing that he's the only other person with a key, that can open it.
+
+Sending messages in padlocked boxes isn't a great way of sending a communicating though. For a start, it doesn't take much more than a hacksaw and a few spare minutes to cut through the padlock and dig out the message. Secondly, your postman is going to end up hating you for constantly sending heavy metal boxes through the mail.
+
+In cryptography, rather than using physical keys and lockable boxes, we use mathematics.
+
+The message you want to hide is called **plaintext**. Once the message has been encrypted it's called **ciphertext**. A **key** can be used to change plaintext to ciphertext and visa versa.
+
+One of the earliest methods of encrypting messages was called the Caesar cipher, so named because according to some sources it was used by the Roman Emperor Julius Caesar, when he sent messages to his generals.
+
+Imagine I want to encrypt the message `the quick brown fox jumps over the lazy dog`. First I choose a key between 1 and 25. Let's go for 13. I then shift every letter in my message forward in the alphabet by 13 places. Here's a handy guide to show you the letter substitutions:
+
+```
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+| | | | | | | | | | | | | | | | | | | | | | | | | |
+n o p q r s t u v w x y z a b c d e f g h i j k l m
+```
+
+So any `a` in my plaintext message becomes an `n` in the ciphertext. A `b` becomes an `o`. My full message becomes `gur dhvpx snfg sbk whzcf bire gur ynml qbt`. This looks like complete nonsense, right? I can now send this message to Robert, and so long as Robert is aware that the key is 13, all he has to do is shift each letter in the message back by 13 places to decrypt the message.
+
+The Caesar cipher was useless, even before the age of computers. For a start, it's easy to **brute force** the ciphertext to plaintext.
+
+Brute force just means trying all the possible combinations of a key, until you are successful. All an evil party --- let's call her Evelyn --- needs do is try every key from 1 to 25. She'll know after the first couple of words have been decrypted if she's found the key or not.
+
+If Evelyn chooses not to brute force the answer, she could look at letter frequencies. For instance the letters `e` and `t` are the most frequently found letters in the English language. So all she needs to do is find the two most common letters in the cipher text, and she can probably assume these are the letters `e` and `t`. This then lets her work out what the key is.
+
+This message has been encrypted using the Caesar cipher, and I have absolutely no doubt that it can easily be decrypted, even though I haven't used the number 13 as a key.
+
+```
+exm tee fxg dghp ahp xfimr tgw phkmaexll bl max ihpxk hy dbgzl, yhk maxkx bl ghgx phkmar hy max gtfx, unm ax pahf axtoxg, xtkma, tgw lxt huxr ur xmxkgte etpl.
+```
+
+[Here's an example of the Caesar Cipher, written in Python](https://github.com/MarcScott/simple_encryption/blob/master/cc.py) that I have used to teach teenagers about encryption.
+
+## Early unbreakable encryption
+
+There were various improvements on the Caesar cipher, but they all suffer from being easily brute forced or being subjected to letter frequency analysis. This all changed with the invention of the one-time pad.
+
+The one-time pad is a genuine unbreakable method of encrypting and decrypting messages. To continue the analogy, it's like using a padlocked box, where both the padlock and the box are made from an unbreakable metal, and you never use the same key/lock combination twice.
+
+The one-time pad is at it's heart a twin pair of notebooks, identical in every way. On each page of the notebooks there is a grid of random numbers. These numbers can be chosen by a computer, or a much more analogue method such as a bingo machine.
+
+Here is an example of a single page of a one-time pad, only using the numbers 0-26 for simplicity's sake.
+
+```
+| 14 |  8 |  4 | 16 | 17 | 12 |  4 | 13 |  5 |  4 |
+|  9 | 19 | 23 | 16 |  8 |  9 | 25 | 21 | 12 |  1 |
+| 19 | 17 |  5 | 11 |  0 | 13 | 22 |  2 |  4 | 21 |
+|  5 | 14 | 22 | 23 |  3 |  1 | 14 | 18 |  9 | 24 |
+|  7 | 23 | 23 | 20 | 10 |  7 | 22 | 16 | 20 | 17 |
+|  4 |  2 | 12 | 23 | 24 |  4 |  1 | 19 | 24 |  2 |
+| 11 | 25 |  3 | 12 |  4 |  1 | 17 | 25 | 16 |  8 |
+| 17 |  8 |  9 | 15 |  5 | 19 | 12 |  5 |  0 | 11 |
+|  7 |  6 | 19 |  5 | 16 |  1 |  3 | 13 | 10 |  4 |
+| 24 | 17 | 25 |  9 |  6 |  9 |  9 | 11 | 17 | 17 |
+```
+
+Now imagine that you and Robert want to exchange messages. You both have copies of the same pad and importantly agree to destroy each page once it has been used once, so you always use a different page for each message you encrypt.
+
+Now you can send Robert a message. Maybe:
+
+```
+Meet me at the pub at nine
+```
+
+So the first character in the message is an `m`, and the first number in the one-time pad is `14`. This means that the character `m` gets shifted fourteen places forward in the alphabet (cycling back around to `a` once `z` has been reached). The cipher text of the character `m` is now an `a`. Then you move on to the next, shifting the first `e` by eight places and the second `e` by four places.
+
+In this way the message becomes:
+
+```
+amij yi fx meu ytw bm stnr
+```
+
+The beauty of this method of encryption is that brute forcing a solution is impossible. The only clue you have as to what the cipher text contains is the length of each word. Letter frequency analysis is also impossible, as the same characters will be encrypted using different, random, shifts each time. You'll notice that the character `e` becomes `m`, `i`, `i` and then `r` in the encryption above.
+
+You can find a simple example of how to create a one-time pad encryption scheme, written in Python, [here](https://github.com/MarcScott/simple_encryption/blob/master/otp.py)
+
+So we have unbreakable encryption, but it has one colossal flaw. In this case, the major problem is **Key Exchange**. You and Robert need to exchange one-time pads. The only safe way to do this is to meet in person and physically hand over the pads (be they printed on paper or stored as files on flash memory). You can't email a one-time pad to Robert, because it could easily be intercepted by the nefarious Evelyn, who can then use her copy of the pad to decrypt all your messages. She doesn't even need to know which page you are using, as she can easily now brute force a decryption just by getting a computer to try every single page on each encrypted message.
+
+If a one-time pad has been intercepted during key exchange, it is useless. That's why I know that the following message, using the one-time pad above, can easily be decrypted.
+
+```
+vbxfj://jr.pfaqydyub.fwr/jemm/hwpfcfbxxsy
+```
+
+## Public Key Cryptography
+
+Clever mathematicians worked out a method to overcome the problems of key exchange back in the 1970s. Yes, that's right, this technology has been around for nearly fifty years!
+
+The analogy gets pulled a little thin here. You want Robert to send you a secret message. So you send out a padlock to everyone in the world, or maybe you just have a bin filled with padlocks that sit outside of your house. We'll call these padlocks your **Public Key**, rather confusingly. You keep the key that can unlock the padlocks safe, and there is only one key. This is called your **Private Key**. Now, anyone can send you a message in a box, and use your public key to lock the box. They can't open the box and neither can anyone else. The box can then be safely sent in the mail, and nobody along the journey can unlock it, until it reaches your house at which point you can unlock the box.
+
+Mathematically this works on a simple principle. Let's take two prime numbers `13337` and `103171`.
+It's trivially easy to prove that `13337 x 103171 = 1375991627`. You can just type it into a calculator. It's really hard to find two prime numbers that when multiplied together makes exactly `1375991627` though. You don't have much choice but to keep multiplying prime numbers together until you find the two that work. Now in this example a computer can do it fairly quickly, but as we increase the size of the prime numbers, the length of time it takes a computer to brute force the solution, quickly stretches to the known life of the Universe.
+
+This clever maths with primes can be used to encrypt messages. To see how easy this is to implement, we can use really low prime numbers, and what is known as the [RSA cryptosystem](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). The mathematics gets a little complicated, but most people with a reasonable understanding of secondary maths can manage it. I know, as I've taught it to twelve and thirteen year-olds.
+
+- Choose three prime numbers. Let's go for `13`, `17` and `19`.
+- Multiply the two largest numbers together. `17 x 19 = 323`
+- Your public key is now a combination of this product and the small prime number `323 13`. You can share this with the world.
+- To get your private key, you need to subtract `1` from your two large primes and multiply them together.
+```
+17 - 1 = 16
+
+19 - 1 = 18
+
+16 * 18 = 288
+```
+- Then find a number that when multiplied by the small prime and divided by this product, gives a remainder of `1`.
+```
+some_number * 13 ÷ 288 = some_other_number remainder 1
+```
+
+- In this case that number is `133`. Computers can quite easily calculate this.
+```
+133 * 13 = 1729
+1729 ÷ 288 = 6 remainder 1
+```
+
+- You now have your private key. It's `323 133`
+
+Now please bare with me. It's important that you understand that although the maths maybe a little complicated, it's not that difficult to implement. You send you public key off over the internet, and Robert gets his copy.
+
+- Robert wants to encrypt the letter `q` to send it to you. He converts it to a number first, using it's position in the alphabet - `17`
+
+- Now he raises that number to the power of the second part of your public key. 
+
+```
+17 ** 13 = 9904578032905937
+```
+
+- Now he divides that number by the first part of your public key, and works out the remainder.
+
+```
+9904578032905937 ÷ 323 = 30664328275250 remainder 187
+```
+
+- This number - `187` is now the ciphertext, that Robert can send off to you.
+
+- You receive the number `187` by email. Raise it to the power of the second part of your private key.
+
+```
+187 ** 133 = 142867573740720566967281881607100347295847400907671386091157121622780454369129479664615460769905626347535899931271341842520680048730294079130102722601895364310787622375946501020768888839654428347116807175403923673347503784689653101030237682797486439417148026581600192839120518456938618487878401112343947
+```
+
+- Wow, That's a big number. Now calculate the remainder when that number is divided by the first part of your private key.
+
+```
+142867573740720566967281881607100347295847400907671386091157121622780454369129479664615460769905626347535899931271341842520680048730294079130102722601895364310787622375946501020768888839654428347116807175403923673347503784689653101030237682797486439417148026581600192839120518456938618487878401112343947
+
+÷ 323 = 
+
+442314469785512581539161245422235995778036566832043721231550219640260682060418642693079682615153948474292406207252865372224104020193042907357701452102267201984216551240583474414661674655052564333398394342775448312722776663559110370250126302215824888785001731815323491471101026301914858467798032580608
+
+remainder 17
+```
+
+- Notice that remainder. It's `17`, which is the position of `q` in the alphabet. You've decrypted the ciphertext and have the plaintext that Robert sent you.
+
+Now obviously you have to do this maths on every letter in your message, but computers can do that very easily. Also using small prime numbers makes this pretty easy to brute force, but again computers come to the rescue by being able to perform these calculations on large primes without too much effort. I hope you can see how trivially easy it is to enact a basic form of encryption, using little more than a scientific calculator, that is almost impossible to crack.
+
+To show you how easy this was to implement, the functions to encrypt and decrypt text can be found [here](https://github.com/MarcScott/simple_encryption/blob/master/poor_rsa.py)
+
+I even generated basic private and public keys using the numbers 983, 991, 997, to send you this very special message.
+
+```
+976887, 181803, 1, 987990, 311560, 987990, 181803, 288665, 311560, 86240, 287704, 836375, 332585, 311560, 249126, 875736, 287704, 311560, 65832, 875736, 875736, 332585, 24625, 461705, 97073, 311560, 1, 987990, 311560, 976887, 1, 461705, 332585, 288665, 44919
+```
+
+## Better Encryption Algorithms
+
+I'm not going to detail the other encryption algorithms available. RSA was one of the first, and the simplest. There are many many more, such as [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP), [Blowfish](https://en.wikipedia.org/wiki/Blowfish_%28cipher%29) and [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). You can read up about these on Wikipedia and many other places on the Web. You can download implementations of these algorithms from various sites to use in combination with your email and other messaging applications. You can even grab the code off GitHub and use encryption in your own software.
+
+## Some advice on combating encryption
+
+Now that you hopefully have some understanding of encryption, let's have a brief chat about how you could go about stopping people from using it to send secret messages to each other, that the security services can't read.
+
+1. **Stop national and international companies using encryption in their products.** This means not only stopping Facebook, Apple and Google using cryptography techniques in their messaging applications, you're also going to need to talk to Mozilla, for instance, as encryption is widely used on the web. You'll need to stop banks and other financial institutions from using encryption on their web traffic as well. If companies outside your jurisdiction refuse, you'd have to block access to their services, in much the same way China and North Korea do.
+
+2. **Remove access to code repositories where encryption software is freely available.** This includes sites such as GitHub and BitBucket, that developers use on a daily basis. There are many others that need blocking as well, and developers are a wily bunch, so you might need to get rid of Google Drive and Dropbox, as it's fairly easy to use these services to store code. Russian tried this and failed, but you could give it a go.
+
+3. **Block or destroy sources of information that detail how encryption algorithms work.** This includes sites such as StackOverflow where encryption algorithms and how to code them are discussed, as well as Wikipedia where the algorithms are detailed. There are a plethora of books you'll also need to ban that teach cryptography techniques. These will need to be outlawed and existing copies in homes and libraries destroyed. I hear that burning is an effective way of destroying a book.
+
+4. **Stop teaching encryption techniques in Mathematics and Computer Science courses at a University level.** You might also need to review the teaching of number theory in secondary schools. It's probably best if children are not taught about prime numbers, to be sure that they don't reinvent any cryptography techniques.
+
+5. **Put me in prison and restrict my access to any form of communication with the outside world.** I've promoted encrypted communication, taught about encrypted communication and used encrypted communication. I'm not going to stop.
+
+Yours faithfully
+
+Marc Scott
+
+note: I'm not a  Cryptography, Mathematics or Computer Science expert. I'm an educator. [This post can be found on Github](https://github.com/MarcScott/coding2learn/blob/master/content/dear-theresa.markdown) and if you would like to correct or improve any elements then issues and pull requests are appreciated.
