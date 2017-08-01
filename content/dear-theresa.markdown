@@ -10,7 +10,7 @@ What I'd like to talk to you about is **encryption**. Wait a second... Please ke
 
 Encryption is simply hiding information so that only an authorised individual can read it. Here's a simple analogy. if you want to send a message to your friend Robert, then you could buy yourself a metal box with a padlock. The padlock has two keys. One key you keep and the other you give to Robert. This way you can write a message, lock it in the box, and send the box to Robert, knowing that he's the only other person with a key, that can open it.
 
-Sending messages in padlocked boxes isn't a great way of sending a communicating though. For a start, it doesn't take much more than a hacksaw and a few spare minutes to cut through the padlock and dig out the message. Secondly, your postman is going to end up hating you for constantly sending heavy metal boxes through the mail.
+Sending messages in padlocked boxes isn't a great way of communicating though. For a start, it doesn't take much more than a hacksaw and a few spare minutes to cut through the padlock and dig out the message. Secondly, your postman is going to end up hating you for constantly sending heavy metal boxes through the mail.
 
 In cryptography, rather than using physical keys and lockable boxes, we use mathematics.
 
