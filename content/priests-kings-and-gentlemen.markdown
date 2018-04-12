@@ -14,7 +14,13 @@ No... Wait... Stop.
 
 "Once upon a time...", is how you begin a nice story. 
 
-It's how you begin a story about children that get lost in a forest, houses made of gingerbread, and killing old women by pushing them into ovens. "Once upon a time..." is for stories about princesses and spinning wheels and handsome princes that molest young women who are comatose. "Once upon a time..." is for stories about stupid children that don't understand the value of beans, that trespass on other people's property, steal their live stocks, and then kill them as their being chased away. Okay, maybe ""Once upon a time..." isn't for nice stories, but it is for stores you read to children at bedtime, for stories with a clear moral message, for stories that can be turned into cartoons.
+It's how you begin a story about children that get lost in a forest, houses made of gingerbread, and killing old women by pushing them into ovens.
+
+"Once upon a time..." is for stories about princesses and spinning wheels and handsome princes that molest young women who are comatose.
+
+"Once upon a time..." is for stories about stupid children that don't understand the value of beans, that trespass on other people's property, steal their live stocks, and then kill them as their being chased away. 
+
+Okay, maybe "Once upon a time..." isn't for nice stories, but it is for stores you read to children at bedtime, for stories with a clear moral message, for stories that can be turned into cartoons.
 
 This is not a nice story. This is a horrible story. This is a story with no moral message. This is a story with a horrible ending. This is a story that shouldn't be read to children at bedtime, and no fucker is turning this story into a cartoon. Horrible, immoral stories that should never be read to children begin in a different way. These stores don't start with "Once upon a time...". These stories start with "In the beginning..."
 
