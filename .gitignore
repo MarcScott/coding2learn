@@ -1,0 +1,4 @@
+*.log
+*.p12
+*.yml
+venv
