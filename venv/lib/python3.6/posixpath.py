@@ -1,0 +1,1 @@
+/nix/store/96wn2gz3mwi71gwcrvpfg39bsymd7gqx-python3-3.6.5/lib/python3.6/posixpath.py
