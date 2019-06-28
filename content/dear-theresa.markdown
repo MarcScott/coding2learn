@@ -97,7 +97,7 @@ vbxfj://jr.pfaqydyub.fwr/jemm/hwpfcfbxxsy
 
 Clever mathematicians worked out a method to overcome the problems of key exchange back in the 1970s. Yes, that's right, this technology has been around for nearly fifty years!
 
-The analogy gets pulled a little thin here. You want Robert to send you a secret message. So you send out a padlock to everyone in the world, or maybe you just have a bin filled with padlocks that sit outside of your house. We'll call these padlocks your **Public Key**, rather confusingly. You keep the key that can unlock the padlocks safe, and there is only one key. This is called your **Private Key**. Now, anyone can send you a message in a box, and use your public key to lock the box. They can't open the box and neither can anyone else. The box can then be safely sent in the mail, and nobody along the journey can unlock it, until it reaches your house at which point you can unlock the box.
+The analogy gets pulled a little thin here. You want Robert to send you a secret message. So you send out an open padlock to everyone in the world, or maybe you just have a bin filled with already opened padlocks that sit outside of your house. We'll call these padlocks your **Public Key**, rather confusingly. You keep the key that can unlock the padlocks safe, and there is only one key. This is called your **Private Key**. Now, anyone can send you a message in a box, and use your public key to lock the box. They can't open the box and neither can anyone else. The box can then be safely sent in the mail, and nobody along the journey can unlock it, until it reaches your house at which point you can unlock the box.
 
 Mathematically this works on a simple principle. Let's take two prime numbers `13337` and `103171`.
 It's trivially easy to prove that `13337 x 103171 = 1375991627`. You can just type it into a calculator. It's really hard to find two prime numbers that when multiplied together makes exactly `1375991627` though. You don't have much choice but to keep multiplying prime numbers together until you find the two that work. Now in this example a computer can do it fairly quickly, but as we increase the size of the prime numbers, the length of time it takes a computer to brute force the solution, quickly stretches to the known life of the Universe.
@@ -128,7 +128,7 @@ some_number * 13 ÷ 288 = some_other_number remainder 1
 
 - You now have your private key. It's `323 133`
 
-Now please bare with me. It's important that you understand that although the maths maybe a little complicated, it's not that difficult to implement. You send you public key off over the internet, and Robert gets his copy.
+Now please bear with me. It's important that you understand that although the maths maybe a little complicated, it's not that difficult to implement. You send you public key off over the internet, and Robert gets his copy.
 
 - Robert wants to encrypt the letter `q` to send it to you. He converts it to a number first, using it's position in the alphabet - `17`
 
