@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-10-08 Tue 14:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Marc Scott" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1581a8f">1. Copycat KFC</a>
+<ul>
+<li><a href="#org31d7e18">1.1. Ingredients</a></li>
+<li><a href="#org3b0fc6e">1.2. Method</a></li>
+<li><a href="#orgefbc359">1.3. Notes</a>
+<ul>
+<li><a href="#orgdb8adb1">1.3.1. 2018-03-08</a></li>
+<li><a href="#orgc63e5b1">1.3.2. <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga8d9b69">2. Salsa</a>
+<ul>
+<li><a href="#org8122da0">2.1. Ingredients</a></li>
+<li><a href="#org563c9fd">2.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#orge20520b">3. Tacos</a>
+<ul>
+<li><a href="#orgb4a3c3b">3.1. Ingredients</a></li>
+<li><a href="#org118c7ee">3.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#orgb166b3a">4. Fajitas</a></li>
+<li><a href="#org332dbe9">5. Hot wings</a>
+<ul>
+<li><a href="#org19a7f9f">5.1. Ingredients</a></li>
+<li><a href="#orgcb7ed32">5.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org8171228">6. Beef Pad Thai</a>
+<ul>
+<li><a href="#orgcd08b33">6.1. Ingredients</a></li>
+<li><a href="#orgb8d4be2">6.2. Instructions</a>
+<ul>
+<li><a href="#org058aaad">6.2.1. Thai Peanut Sauce Preparation:</a></li>
+<li><a href="#orgf9a02ea">6.2.2. Beef Pad Thai Preparation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1556fd2">7. Silverside Roast Beef</a>
+<ul>
+<li><a href="#orgef0d47c">7.1. Ingredints</a></li>
+<li><a href="#orgffbf132">7.2. Method</a></li>
+<li><a href="#org0c90598">7.3. Notes</a></li>
+</ul>
+</li>
+<li><a href="#org2e68cb6">8. Crispy Pork Belly</a>
+<ul>
+<li><a href="#org72d6ae6">8.1. Ingredients</a></li>
+<li><a href="#orgfec5525">8.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org6244bdd">9. Yorkshire Puddings</a>
+<ul>
+<li><a href="#org6559889">9.1. Ingredients</a></li>
+<li><a href="#org12e5334">9.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org6352913">10. Roast Poatoes</a>
+<ul>
+<li><a href="#org2e7b195">10.1. Ingredients</a></li>
+<li><a href="#orge798e17">10.2. Method</a></li>
+<li><a href="#orga2cd9ed">10.3. Notes</a></li>
+</ul>
+</li>
+<li><a href="#org3e968e6">11. Gravy</a>
+<ul>
+<li><a href="#orgeb7fa1a">11.1. Ingredients</a></li>
+<li><a href="#org806d0e5">11.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org8df061a">12. Sauteed Kale</a>
+<ul>
+<li><a href="#org635ac59">12.1. Ingredients</a></li>
+<li><a href="#org2a28b22">12.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#orgb93476a">13. French Fries</a>
+<ul>
+<li><a href="#org1ae05eb">13.1. Ingredients</a></li>
+<li><a href="#org2170ab7">13.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org09c9e44">14. Burgers</a>
+<ul>
+<li><a href="#orge234e56">14.1. Ingredients</a>
+<ul>
+<li><a href="#org175aba5">14.1.1. Stirins</a></li>
+</ul>
+</li>
+<li><a href="#orgbb71394">14.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org5fdd92d">15. Peri Peri Chicken</a>
+<ul>
+<li><a href="#orge5ce02f">15.1. Ingredients</a>
+<ul>
+<li><a href="#org9520fd2">15.1.1. Peri Peri Marinade:</a></li>
+</ul>
+</li>
+<li><a href="#org6c9d7e5">15.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org834f549">16. Garlic Rice</a>
+<ul>
+<li><a href="#org8dd0085">16.1. Ingredients</a></li>
+<li><a href="#org737e37b">16.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#orgd64b4d6">17. BBQ Brisket</a>
+<ul>
+<li><a href="#org0f9ce45">17.1. Ingredients</a>
+<ul>
+<li><a href="#orgde69785">17.1.1. Rub:</a></li>
+<li><a href="#org55f58b1">17.1.2. BBQ Sauce:</a></li>
+</ul>
+</li>
+<li><a href="#org5012767">17.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org63b87f2">18. Pork ribs</a>
+<ul>
+<li><a href="#org4ab92e5">18.1. Ingredients</a></li>
+<li><a href="#org306fa41">18.2. Method</a></li>
+</ul>
+</li>
+<li><a href="#org8d2ad0e">19. Beef and Ale Pie</a>
+<ul>
+<li><a href="#orgf8aae03">19.1. Ingredients</a>
+<ul>
+<li><a href="#org009fa91">19.1.1. Meat</a></li>
+<li><a href="#orge6f22bc">19.1.2. For the pastry</a></li>
+</ul>
+</li>
+<li><a href="#org9bfc0cd">19.2. Method</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1581a8f" class="outline-2">
+<h2 id="org1581a8f"><span class="section-number-2">1</span> Copycat KFC</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org31d7e18" class="outline-3">
+<h3 id="org31d7e18"><span class="section-number-3">1.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>1 whole chicken (2 breasts, 2 thighs, 2 drumsticks, 2 wings)</li>
+<li>2 quarts neutral oil, for frying</li>
+<li>1 egg white</li>
+<li>1 1/2 cups all-purpose flour</li>
+<li>1 tablespoon brown sugar</li>
+<li>1 tablespoon kosher salt</li>
+<li>1 tablespoon paprika</li>
+<li>2 teaspoons onion salt</li>
+<li>1 teaspoon chili powder</li>
+<li>1 teaspoon black pepper</li>
+<li>1/2 teaspoon celery salt</li>
+<li>1/2 teaspoon dried sage</li>
+<li>1/2 teaspoon garlic powder</li>
+<li>1/2 teaspoon ground allspice</li>
+<li>1/2 teaspoon dried oregano</li>
+<li>1/2 teaspoon dried basil</li>
+<li>1/2 teaspoon dried marjoram</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3b0fc6e" class="outline-3">
+<h3 id="org3b0fc6e"><span class="section-number-3">1.2</span> Method</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>Preheat fryer to 150°C. Thoroughly mix together all the spice mix
+ingredients.</li>
+<li>Combine spice mix with flour, brown sugar and salt.</li>
+<li>Dip chicken pieces in egg white to lightly coat them, then transfer
+to flour mixture. Turn a few times and make sure the flour mix is
+really stuck to the chicken. Repeat with all the chicken pieces.</li>
+<li>Let chicken pieces rest for 5 minutes so crust has a chance to dry a
+bit.</li>
+<li>Fry chicken in batches. Breasts and wings should take 15 minutes, and
+legs and thighs will need 20 minutes. Chicken pieces are done when a
+meat thermometer inserted into the thickest part reads 165°F.</li>
+<li>Let chicken drain on a few paper towels when it comes out of the
+fryer. Serve hot.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgefbc359" class="outline-3">
+<h3 id="orgefbc359"><span class="section-number-3">1.3</span> Notes</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgdb8adb1" class="outline-4">
+<h4 id="orgdb8adb1"><span class="section-number-4">1.3.1</span> 2018-03-08</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>Tried doubling all spices (not flour)</li>
+<li>2 egg whites</li>
+<li><b>Didn't work</b></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc63e5b1" class="outline-4">
+<h4 id="orgc63e5b1"><span class="section-number-4">1.3.2</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span></h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li>cooked for 15 minutes for breast and 20 minutes for legs and thighs on
+150 degrees</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8d9b69" class="outline-2">
+<h2 id="orga8d9b69"><span class="section-number-2">2</span> Salsa</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8122da0" class="outline-3">
+<h3 id="org8122da0"><span class="section-number-3">2.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>6 ripe tomatoes</li>
+<li>1 red pepper</li>
+<li>1 big bunch of fresh coriander</li>
+<li>1 onion</li>
+<li>2 fresh jalapeño or green chillies</li>
+<li>1 large clove of garlic</li>
+<li>1 lime</li>
+<li>extra virgin olive oil</li>
+<li>1tsp salt</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org563c9fd" class="outline-3">
+<h3 id="org563c9fd"><span class="section-number-3">2.2</span> Method</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Finely chop the tomatoes and coriander (stalks and all) and place into
+a large bowl.</li>
+<li>Peel and finely chop the onion, deseed and finely chop the chillies,
+then scrape into the bowl. Peel and finely grate in the garlic.</li>
+<li>Squeeze in the juice from 1 lime, add 2 tablespoons of extra virgin
+olive oil, and mix well. Season to taste with sea salt, black pepper
+and more lime juice, if needed.</li>
+<li>Serve straightaway or cover and set aside for a few hours to let all
+those flavours develop.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge20520b" class="outline-2">
+<h2 id="orge20520b"><span class="section-number-2">3</span> Tacos</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb4a3c3b" class="outline-3">
+<h3 id="orgb4a3c3b"><span class="section-number-3">3.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>500g beef mince</li>
+<li>1 onion, chopped</li>
+<li>1 green pepper, chopped</li>
+<li>1 garlic clove, crushed</li>
+<li>2 teaspoon hot paprika</li>
+<li>2 teaspoon ground cumin</li>
+<li>1/2 teaspoon dried red chilli flakes</li>
+<li>1/2 teasponn of cayenne pepper</li>
+<li>6 tablespoons tomato puree</li>
+<li>12 flour tortillas or taco shells</li>
+<li>peanut oil, for frying</li>
+<li>1 tsp salt</li>
+<li>1 tsp course ground peppper</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org118c7ee" class="outline-3">
+<h3 id="org118c7ee"><span class="section-number-3">3.2</span> Method</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Dry-fry the mince in a frying pan until brown and crumbly, stirring
+occasionally and breaking it up with a wooden spoon.</li>
+<li>Add the onion, green pepper and garlic; cook, stirring occasionally,
+until softened. Stir in the herbs and spices; season to taste with
+salt and pepper. Add the tomato puree and mix well. Cover and cook
+gently for 10 minutes, stirring occasionally.</li>
+<li>Place a little of the mixture on each tortilla and roll up, or spoon
+into the taco shells. Secure tortillas with a cocktail stick. If using
+tortillas, heat the oil in a frying pan and then fry the rolls quickly
+until golden. Serve with your choice of accompaniments.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb166b3a" class="outline-2">
+<h2 id="orgb166b3a"><span class="section-number-2">4</span> Fajitas</h2>
+</div>
+<div id="outline-container-org332dbe9" class="outline-2">
+<h2 id="org332dbe9"><span class="section-number-2">5</span> Hot wings</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org19a7f9f" class="outline-3">
+<h3 id="org19a7f9f"><span class="section-number-3">5.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>3/4 cup all-purpose flour</li>
+<li>1/2 teaspoon cayenne pepper</li>
+<li>1/2 teaspoon garlic powder</li>
+<li>1/2 teaspoon salt</li>
+<li>20 chicken wings</li>
+<li>1/2 cup melted butter (100g)</li>
+<li>1/2 cup hot pepper sauce (such as Frank's RedHot®)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb7ed32" class="outline-3">
+<h3 id="orgcb7ed32"><span class="section-number-3">5.2</span> Method</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Line a baking sheet with aluminum foil, and lightly grease with
+cooking spray. Place the flour, cayenne pepper, garlic powder, and
+salt into a resealable plastic bag, and shake to mix. Add the chicken
+wings, seal, and toss until well coated with the flour mixture. Place
+the wings onto the prepared baking sheet, and place into the
+refrigerator. Refrigerate at least 1 hour.</li>
+<li>Preheat oven to 400 degrees F (200 degrees C).</li>
+<li>Whisk together the melted butter and hot sauce in a small bowl. Dip
+the wings into the butter mixture, and place back on the baking sheet.
+Bake in the preheated oven until the chicken is no longer pink</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8171228" class="outline-2">
+<h2 id="org8171228"><span class="section-number-2">6</span> Beef Pad Thai</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgcd08b33" class="outline-3">
+<h3 id="orgcd08b33"><span class="section-number-3">6.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>1 cup dry roasted peanuts</li>
+<li>1⁄3 cup water</li>
+<li>1 garlic clove, minced</li>
+<li>1⁄2 teaspoon dark soy sauce</li>
+<li>2 teaspoons sesame oil</li>
+<li>2 tablespoons brown sugar</li>
+<li>1⁄4 teaspoon red pepper flakes (more or less to taste)</li>
+<li>2 tablespoons asian fish sauce (If vegetarian, use vegetarian fish
+sauce or regular soy sauce)</li>
+<li>1⁄2 teaspoon tahini paste</li>
+<li>1 teaspoon red chili sauce (more or less to taste)</li>
+<li>1 teaspoon lime juice</li>
+<li>lime zest</li>
+<li>1 tablespoon peanut oil</li>
+<li>1 teaspoon peeled and minced fresh ginger (you can find this in the
+oriental section of your grocery store) or 1 teaspoon sliced ginger in
+a jar (you can find this in the oriental section of your grocery
+store)</li>
+<li>2 garlic cloves, minced</li>
+<li>3 -4 tablespoons teriyaki sauce</li>
+<li>1 cup cremini mushrooms, sliced or 1 cup shiitake mushroom</li>
+<li>1 onion, sliced small onion, into long thin slices work best</li>
+<li>1 lb lean beef steak, cut crosswise into 1/4 inch strips (such as
+sirloin tip or flank)</li>
+<li>1⁄4 cup chopped dry roasted peanuts</li>
+<li>1⁄4 cup chopped scallion (3-4 scallions, white &amp; green parts)</li>
+<li>8 ounces somen noodles or 8 ounces soba noodles, noodes or 8 ounces
+whole-wheat spaghetti</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb8d4be2" class="outline-3">
+<h3 id="orgb8d4be2"><span class="section-number-3">6.2</span> Instructions</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org058aaad" class="outline-4">
+<h4 id="org058aaad"><span class="section-number-4">6.2.1</span> Thai Peanut Sauce Preparation:</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>Place the first 12 ingredients (from the peanuts to the lime zest), in
+a blender.</li>
+<li>Blend until sauce is smooth. If you prefer a runnier peanut sauce, add
+a little more water. Do a taste test for salt and spice, adding more
+fish sauce if not salty enough, and more chili sauce &amp;/or red pepper
+flakes, if not spicy enough. If too salty, add another squeeze of
+fresh limejuice.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9a02ea" class="outline-4">
+<h4 id="orgf9a02ea"><span class="section-number-4">6.2.2</span> Beef Pad Thai Preparation:</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ul class="org-ul">
+<li>Cook the noodles according to the package directions. Drain, transfer
+to a large bowl, and cover with aluminum foil or plastic wrap to keep
+warm.</li>
+<li>Heat the peanut oil in a large skillet over medium-high heat. Add the
+ginger and garlic - cook, stirring, for 2 minutes. Add the sliced
+onions &amp; mushrooms, stir-fry for 2 minutes. Add the beef and stir-fry
+another 2 minutes. Next, add the teriyaki sauce &amp; a 1/2 cup of the
+Thai peanut sauce, stir all together, and simmer until the beef is
+cooked through, about 4-5 minutes.</li>
+<li>Transfer the noodles to the beef mixture &amp; toss to combine. Serve on
+individual plates topped with the peanuts and scallions. The leftover
+peanut sauce will keep in the refrigerator up to 4 days or in the
+freezer up to 3 months; thaw completely in the refrigerator or
+microwave for about 3 minutes on LOW before using.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1556fd2" class="outline-2">
+<h2 id="org1556fd2"><span class="section-number-2">7</span> Silverside Roast Beef</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgef0d47c" class="outline-3">
+<h3 id="orgef0d47c"><span class="section-number-3">7.1</span> Ingredints</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Silver side beef joint</li>
+<li>1 tbsp beef dripping or butter</li>
+<li>1 tsp salt and some freshly ground black pepper</li>
+<li>8-12 small red onions, peeled and slit in a cross at the pointed end
+(so that they do not burst in the oven)</li>
+<li>4 heads garlic, halved horizontally</li>
+<li>A few sprigs of thyme</li>
+<li>Buttered spinach to serve.</li>
+<li>Celery stick</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgffbf132" class="outline-3">
+<h3 id="orgffbf132"><span class="section-number-3">7.2</span> Method</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Preheat the oven to 210°C. Rub the rolled silverside joint with the
+beef dripping and sprinkle with plenty of salt and pepper.</li>
+<li>Add onions and garlic, thyme and celery - chopped but not peeled to
+the base of the tin as a trivet. Place beef on top.</li>
+<li>Place into the hot oven for 25 minutes to brown. Then reduce the oven
+temperature to 180°C.</li>
+<li>Add 100 ml of water.</li>
+<li>Cover with foil and cook , basting from time to time and adding a
+little more water if necessary. This will keep the meat moist.
+Re-cover with the foil each time.</li>
+<li>Cook for 25 mins per 450g in total</li>
+<li>Uncover the meat for the last 15 minutes of cooking.</li>
+<li>Remove the meat to a warm serving dish with the onions and garlic,
+cover well and keep it warm.</li>
+<li>Slice the beef and serve a couple of slices per person with the soft
+onions, a piece of garlic, the Yorkshire puddings and a spoon or two
+of gravy and your favourite green leafy vegetable, such as spinach.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c90598" class="outline-3">
+<h3 id="org0c90598"><span class="section-number-3">7.3</span> Notes</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span>
+</p>
+<ul class="org-ul">
+<li>15:55 Beef in</li>
+<li>16:20 beef turned down</li>
+<li>17:00 Start cooking potatoes</li>
+<li>17:40 Potatoes in oven</li>
+<li>17:45 Uncover meat and turn up oven to 210</li>
+<li>18:00 peas and carrots</li>
+<li>18:00 flip potatoes</li>
+<li>18:00 beef out to rest</li>
+<li>18:00 Start Yorkshire puddings</li>
+<li>18:20 Yorkshire puddings out</li>
+<li><b>Yorkshires were shit - find another recepie</b></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2e68cb6" class="outline-2">
+<h2 id="org2e68cb6"><span class="section-number-2">8</span> Crispy Pork Belly</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org72d6ae6" class="outline-3">
+<h3 id="org72d6ae6"><span class="section-number-3">8.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li>1/2 pound whole pork belly, skin removed</li>
+<li>1/2 teaspoon smoked paprika, or to taste</li>
+<li>kosher salt and ground black pepper to taste</li>
+<li>1 tablespoon olive oil, or to taste</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfec5525" class="outline-3">
+<h3 id="orgfec5525"><span class="section-number-3">8.2</span> Method</h3>
+<div class="outline-text-3" id="text-8-2">
+<ul class="org-ul">
+<li>Preheat oven to 200 degrees F (95 degrees C).</li>
+<li>Season pork belly all over with smoked paprika, salt, and black
+pepper. Wrap pork in parchment paper; wrap a second time in aluminum
+foil, and a third time in another sheet of aluminum foil. Place pork
+packet in a baking dish.</li>
+<li>Roast in the preheated oven until tender for 6 hours. Let cool in
+wrappings to room temperature; place cooled packet in refrigerator and
+chill for 8 hours or overnight.</li>
+<li>Unwrap chilled meat. Save any rendered fat that falls away when
+unwrapping pork.</li>
+<li>Cut meat into 6 equal-size portions. Cut 1/8-inch by 1/8-inch slashes
+in the fat-side of the pork. Season with salt.</li>
+<li>Heat 2 tablespoons reserved pork fat in a skillet over medium heat.
+Place pork belly, fat side down, in hot fat; cook until well-browned
+on all sides and heated through, 5 to 10 minutes. Transfer pork belly
+to a plate, drizzle with olive oil and season with pepper.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6244bdd" class="outline-2">
+<h2 id="org6244bdd"><span class="section-number-2">9</span> Yorkshire Puddings</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org6559889" class="outline-3">
+<h3 id="org6559889"><span class="section-number-3">9.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-9-1">
+<ul class="org-ul">
+<li>4oz Flour</li>
+<li>8oz Milk</li>
+<li>2 eggs</li>
+<li>pinch salt</li>
+<li>Tbsp Oil</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org12e5334" class="outline-3">
+<h3 id="org12e5334"><span class="section-number-3">9.2</span> Method</h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li>Oven temperature to 210°C.</li>
+<li>In a large bowl mix the flour and salt, make a well in the centre,
+break in the eggs and hand whisk in half the liquid, gradually
+incorporating the flour as you whisk until you have a smooth thick
+batter with no lumps.</li>
+<li>Stir in the remaining liquid and leave to stand.</li>
+<li>Put 1/2 a teaspoon of beef dripping into each of the muffin cups.</li>
+<li>Place the muffin tin in the oven until the fat is very hot, stir the
+batter well, then 2/3 fill each muffin cup and return to the oven for
+about 20 minutes until well risen and golden brown. They should feel
+firm and in no danger of collapse, so leave them in a little longer if
+necessary.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6352913" class="outline-2">
+<h2 id="org6352913"><span class="section-number-2">10</span> Roast Poatoes</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org2e7b195" class="outline-3">
+<h3 id="org2e7b195"><span class="section-number-3">10.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-10-1">
+<ul class="org-ul">
+<li>Potatoes</li>
+<li>2 tbsp plain flour</li>
+<li>3 tbsp sunflower oil</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge798e17" class="outline-3">
+<h3 id="orge798e17"><span class="section-number-3">10.2</span> Method</h3>
+<div class="outline-text-3" id="text-10-2">
+<ul class="org-ul">
+<li>An hour before roast is ready, start the potatoes</li>
+<li>Peel and halve potatoes and bring to boil in a pan of cold water. Boil
+for 2 minutes exactly.</li>
+<li>Drain potatoes and toss in colinder, adding flour.</li>
+<li>Add oil to a roasting tin over high heat, when sizzling add potatoes
+and cook for 5 minutes, ensuring even coating of oil</li>
+<li>Roast undistrubed for 20 min, then turn and roast for another 20
+minutes.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga2cd9ed" class="outline-3">
+<h3 id="orga2cd9ed"><span class="section-number-3">10.3</span> Notes</h3>
+<div class="outline-text-3" id="text-10-3">
+<ul class="org-ul">
+<li>Used Gooes fat - and worked amazingly well</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3e968e6" class="outline-2">
+<h2 id="org3e968e6"><span class="section-number-2">11</span> Gravy</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgeb7fa1a" class="outline-3">
+<h3 id="orgeb7fa1a"><span class="section-number-3">11.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-11-1">
+<ul class="org-ul">
+<li>100 ml red/white wine</li>
+<li>100 ml water</li>
+<li>1 tbsp Dijon or English mustard</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org806d0e5" class="outline-3">
+<h3 id="org806d0e5"><span class="section-number-3">11.2</span> Method</h3>
+<div class="outline-text-3" id="text-11-2">
+<ul class="org-ul">
+<li>Discard any fat from the surface of the pan juices, and with the pan
+over a medium heat stir in the wine and gather up all the sticky bits,
+add the water and the port or redcurrant jelly and when melted simmer
+to reduce the liquid a little.</li>
+<li>Add the mustard and stir until thickened. Taste and season as
+necessary.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8df061a" class="outline-2">
+<h2 id="org8df061a"><span class="section-number-2">12</span> Sauteed Kale</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org635ac59" class="outline-3">
+<h3 id="org635ac59"><span class="section-number-3">12.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-12-1">
+<ul class="org-ul">
+<li>1 pound kale leaves (dark green, stem removed and leaves chopped, then
+washed and dried)</li>
+<li>1 tablespoon extra-virgin olive oil (or slightly more, depending on
+your pan)</li>
+<li>1 red onion (chopped in small pieces, or use about 1/2 cup chopped
+shallots)</li>
+<li>2 cloves garlic (fresh, very finely minced)</li>
+<li>2 cups water (added 1/2 cup at a time)</li>
+<li>1 tbsp white wine vinegar</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a28b22" class="outline-3">
+<h3 id="org2a28b22"><span class="section-number-3">12.2</span> Method</h3>
+<div class="outline-text-3" id="text-12-2">
+<ul class="org-ul">
+<li>Chop the onion or shallots and finely mince the garlic, then heat oil
+in heavy frying pan until it's medium-hot and saute onion 3-4 minutes
+until it starts to brown. When onion is turning slightly brown, add
+garlic and saute 1 minute more.</li>
+<li>While onions and garlic cook, cut away the center rib from each kale
+leaf and discard. Chop or tear the kale leaves into bite-sized pieces,
+then wash and spin dry or dry with paper towels.</li>
+<li>Add chopped kale leaves to the browned onion/garlic mixture, season
+generously with salt and fresh ground black pepper, and let the kale
+wilt for 2-3 minutes, then add 1/2 cup water, stir, and let the kale
+cook in the water until the pan is almost dry, about 5-10 minutes.</li>
+<li>Add 1/2 cup more water and cook kale 5-10 minutes more, then add a
+third 1/2 cup of water and cook kale 5-10 minutes more. After you've
+added water and cooked it off three times, taste to see if the kale is
+tender; if not, add water one more time and cook a bit longer.</li>
+<li>When kale is melt-in-your-mouth tender and the pan is nearly dry,
+season as desired with vinegar and serve hot or warm.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb93476a" class="outline-2">
+<h2 id="orgb93476a"><span class="section-number-2">13</span> French Fries</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org1ae05eb" class="outline-3">
+<h3 id="org1ae05eb"><span class="section-number-3">13.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-13-1">
+<ul class="org-ul">
+<li>8 cups cold water</li>
+<li>2 tablespoons fine sea salt</li>
+<li>2 1⁄2 teaspoons granulated sugar</li>
+<li>1 teaspoon white pepper</li>
+<li>2 tablespoons white vinegar</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2170ab7" class="outline-3">
+<h3 id="org2170ab7"><span class="section-number-3">13.2</span> Method</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li>PEEL 4 medium russet potatoes; CUT potatoes into 1/4" shoestrings (try
+to make them as uniform as possible; I use an adjustable-blade
+French-fry cutter).</li>
+<li>PLACE cut potatoes into the brine container; SEAL and refrigerate for
+at least 2 hours; BRING pot with brine and potatoes to a full boil;
+BOIL for 1 1/2-2 minutes; DRAIN and rinse potatoes under cold water;
+BLOT potatoes as dry as possible.</li>
+<li>PLACE potatoes side-by-side into freezer bags without touching, and
+without crowding; SEAL bags and freeze flat in refrigerator for at
+least 2 hours (just make sure fries are frozen solid).</li>
+<li>FILL deep-fryer with proper amount of beef tallow (or oil/shortening
+blend), to manufacturer's recommended amount; HEAT fryer in gradual
+increments to 375°F.</li>
+<li>PLACE 1/2 of the potatoes at a time into elevated deep-frying basket;
+GENTLY lower basket into hot fat.</li>
+<li>FRY for about 2 minutes but PAY ATTENTION TO THE COLOR &#x2013; potato color
+should be light golden brown with just slightly darker ends (see
+photo, and pull a french fry with tongs to test doneness if
+necessary); ELEVATE fry basket and shake to drain excess fat; SECURE
+basket and let drain for 30 seconds.</li>
+<li>TRANSFER fries into colander placed in sink; REPEAT with remaining
+potatoes.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org09c9e44" class="outline-2">
+<h2 id="org09c9e44"><span class="section-number-2">14</span> Burgers</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orge234e56" class="outline-3">
+<h3 id="orge234e56"><span class="section-number-3">14.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-14-1">
+<ul class="org-ul">
+<li>1 egg</li>
+<li>1 teaspoon mustard (regular or Dijon)</li>
+<li>1 teaspoon Worcestershire sauce</li>
+<li>1 small onion, finely grated</li>
+<li>1 clove garlic, minced</li>
+<li>1⁄2 teaspoon salt</li>
+<li>1⁄2 teaspoon pepper</li>
+<li>500g medium ground beef</li>
+</ul>
+</div>
+<div id="outline-container-org175aba5" class="outline-4">
+<h4 id="org175aba5"><span class="section-number-4">14.1.1</span> Stirins</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<ul class="org-ul">
+<li>1 teaspoon dried mixed herbs</li>
+<li>2 teaspoons cajun seasoning</li>
+<li>1 tbsp fresh herbs</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb71394" class="outline-3">
+<h3 id="orgbb71394"><span class="section-number-3">14.2</span> Method</h3>
+<div class="outline-text-3" id="text-14-2">
+<ul class="org-ul">
+<li>Lightly oil grill</li>
+<li>Whisk egg in a bowl&amp; add next 6 ingredients.</li>
+<li>Add any of the “stir-ins” that appeal to you.</li>
+<li>Crumble in beef using your hands or a fork, gently mix together.</li>
+<li>Handle the meat as little as possible &#x2013; the more you work it, the
+tougher it gets.</li>
+<li>Gently shape (don't firmly press) mixture into burgers about ¾ inch
+thick.</li>
+<li>Heat up lightly oiled grill and when hot turn to medium heat (about 4
+minutes)</li>
+<li>Place burgers on the grill and cook 4 minutes on each side</li>
+<li>Tuck into a warm crusty bun add your favourite toppings.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5fdd92d" class="outline-2">
+<h2 id="org5fdd92d"><span class="section-number-2">15</span> Peri Peri Chicken</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-orge5ce02f" class="outline-3">
+<h3 id="orge5ce02f"><span class="section-number-3">15.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-15-1">
+<ul class="org-ul">
+<li>4 chicken breasts (I used skinless and boneless)</li>
+<li>Salt and pepper to taste</li>
+<li>2 tablespoons olive oil</li>
+<li>2 cups peppers, chopped (I used red, yellow and orange)</li>
+<li>4&#x2013;6 thin slices of lemon</li>
+<li>2 sprig fresh thyme</li>
+<li>2 sprigs fresh rosemary</li>
+</ul>
+</div>
+<div id="outline-container-org9520fd2" class="outline-4">
+<h4 id="org9520fd2"><span class="section-number-4">15.1.1</span> Peri Peri Marinade:</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<ul class="org-ul">
+<li>3 cloves garlic, peeled and roughly chopped</li>
+<li>1/2 teaspoon crushed red pepper flakes</li>
+<li>1 tablespoon smoked paprika</li>
+<li>1/4 cup lime juice / 1 Large Lime</li>
+<li>1/4 cup olive oil</li>
+<li>1 tablespoon red wine vinegar</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6c9d7e5" class="outline-3">
+<h3 id="org6c9d7e5"><span class="section-number-3">15.2</span> Method</h3>
+<div class="outline-text-3" id="text-15-2">
+<ul class="org-ul">
+<li>To make the peri-peri marinade: place all the ingredients in the bowl
+of a small food processor and process until puréed.</li>
+<li>Season chicken with salt and pepper to taste. Place the chicken in a
+large sealable plastic bag. Add the peri-peri marinade and close. Rub
+the bag to coat the chicken in the marinade then refrigerate for 4
+hours, or overnight.</li>
+<li>Preheat the oven to 200°C</li>
+<li>Remove the chicken from the bag and drain off the excess marinade.
+Reserve marinade.</li>
+<li>Heat oil in a skillet over medium-high heat. Place chicken in the
+skillet and brown each side until nice golden color. Turn off heat.
+Add reserved marinade, peppers, lemon slices, thyme, and rosemary,
+over the chicken. Cover the skillet with parchment paper.</li>
+<li>Bake for 20 - 30 minutes, or until the chicken reaches an internal
+temperature of 165º F in the thickness part. Cooking time will depend
+on the size of the chicken breasts. Remove from oven and allow to
+rest, covered, for 10 minutes.</li>
+<li>Serve with the lime wedges and pan juices.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org834f549" class="outline-2">
+<h2 id="org834f549"><span class="section-number-2">16</span> Garlic Rice</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-org8dd0085" class="outline-3">
+<h3 id="org8dd0085"><span class="section-number-3">16.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-16-1">
+<ul class="org-ul">
+<li>40g Salted Butter</li>
+<li>9 to 12 Cloves garlic (approximately 2 heaping Tbs)</li>
+<li>2 cups Jasmine rice</li>
+<li>3 cups Water</li>
+<li>1 Green onion</li>
+<li>Cilantro</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org737e37b" class="outline-3">
+<h3 id="org737e37b"><span class="section-number-3">16.2</span> Method</h3>
+<div class="outline-text-3" id="text-16-2">
+<ul class="org-ul">
+<li>Heat a large thick bottom pot that has lid over low heat. Add butter
+and let it slowly melt.</li>
+<li>Meanwhile roughly chop garlic and onion. Add into melted butter and
+increase heat to medium. Fry garlic for 4 to 5 minutes until garlic is
+golden brown and crispy. Stir occasionally so they will cook evenly.
+Be careful not to burn, it will give bitter flavor.</li>
+<li>Turn off heat and take fried garlic out on a plate with paper towel.
+Set aside.</li>
+<li>Turn back heat to medium; add rice into beautiful garlic infused
+butter. Stir to coat every single grain of rice with butter and toast
+them for 1 to 2 minutes until rice absorbed butter and toasted evenly.
+Stir occasionally.</li>
+<li>Add water; stir once and cover with lid. Increase heat to high and
+bring it to boil. When it starts boiling, reduce heat to low and stir
+one last time from bottom to top with an wooden spoon. Cover back on,
+simmer for 10 minutes.</li>
+<li>Remove from heat and let it sit for 10 extra minutes so rice will
+finish cooking. Don't open lid in this process, because rice will need
+all hot steam inside of pot to finish cooking.</li>
+<li>Meanwhile, chop green onion and some cilantro for garnish.</li>
+<li>Now, finally open and fluff rice from bottom to top with a spoon or
+fork. Garnish with chopped green onion, cilantro and fried garlic.
+Serve hot and let your guest to mix the rice and garnish. Enjoy!</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd64b4d6" class="outline-2">
+<h2 id="orgd64b4d6"><span class="section-number-2">17</span> BBQ Brisket</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-org0f9ce45" class="outline-3">
+<h3 id="org0f9ce45"><span class="section-number-3">17.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-17-1">
+<ul class="org-ul">
+<li>1.5 &#x2013; 2 kg / 3 &#x2013; 4 lb beef brisket (Note 1)</li>
+<li>500 ml/ 18 fl oz beef stock</li>
+</ul>
+</div>
+<div id="outline-container-orgde69785" class="outline-4">
+<h4 id="orgde69785"><span class="section-number-4">17.1.1</span> Rub:</h4>
+<div class="outline-text-4" id="text-17-1-1">
+<ul class="org-ul">
+<li>1 tbsp brown sugar</li>
+<li>2 tsp paprika powder</li>
+<li>1 tsp onion powder</li>
+<li>1 tsp garlic powder</li>
+<li>1/2 tsp cumin powder</li>
+<li>3/4 tsp mustard powder</li>
+<li>1 tsp salt</li>
+<li>1/2 tsp black pepper</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org55f58b1" class="outline-4">
+<h4 id="org55f58b1"><span class="section-number-4">17.1.2</span> BBQ Sauce:</h4>
+<div class="outline-text-4" id="text-17-1-2">
+<ul class="org-ul">
+<li>1 tbsp sunflower oil</li>
+<li>1 small onion, finely chopped</li>
+<li>3 garlic cloves, crushed</li>
+<li>500 ml/ 18 fl oz tomato ketchup</li>
+<li>100 ml/ 3½ fl oz Worcestershire sauce</li>
+<li>75 ml/ 2½ fl oz lemon juice</li>
+<li>2 tbsp brown sugar</li>
+<li>1 tbsp malt vinegar</li>
+<li>2 tsp Dijon mustard</li>
+<li>1 tsp crushed chilli flakes</li>
+<li>1 tsp Tabasco sauce</li>
+<li>1 tsp dried thyme</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5012767" class="outline-3">
+<h3 id="org5012767"><span class="section-number-3">17.2</span> Method</h3>
+<div class="outline-text-3" id="text-17-2">
+<ul class="org-ul">
+<li>To make the barbecue sauce, heat the oil in a frying pan, then cook
+onion and garlic for a few mins until soft. Add the rest of the sauce
+ingredients to the pan with a good pinch of salt and simmer for 20
+mins. Use a hand blender or food processor to whizz to a smooth purée.</li>
+<li>Heat oven to 150C/130C fan/gas 2. Make the rub by mixing all the
+ingredients together with a pinch of salt. Rub the mix all over the
+beef and set aside.</li>
+<li>In a large roasting tin, mix the beef stock and ½ the barbecue sauce.
+Add the brisket to the tin, cover tightly with foil, then cook for 4-5
+hrs until the meat is really tender when you push a fork into it. The
+beef can be prepared the night before &#x2013; just leave it to cool in the
+tin covered with foil, but don't refrigerate.</li>
+<li>To finish the beef, get a barbecue fired up and wait until the coals
+are completely ashen &#x2013; you want a low, not fierce, heat. Lift the
+beef out of the roasting tin and place on the barbecue to char. If
+your barbecue has a lid, close it now. Cook for about 20 mins, turning
+it carefully with tongs, until lightly charred all over and heated
+through. Lift onto a board and serve sliced with the remaining
+barbecue sauce on the side.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org63b87f2" class="outline-2">
+<h2 id="org63b87f2"><span class="section-number-2">18</span> Pork ribs</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+<div id="outline-container-org4ab92e5" class="outline-3">
+<h3 id="org4ab92e5"><span class="section-number-3">18.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-18-1">
+<ul class="org-ul">
+<li>1/4 cup salt</li>
+<li>1/4 cup white sugar</li>
+<li>2 tablespoons brown sugar (packed)</li>
+<li>2 tablespoons ground black pepper</li>
+<li>2 tablespoons ground white pepper</li>
+<li>2 tablespoons onion powder</li>
+<li>1 tablespoon garlic powder</li>
+<li>1 tablespoon chili powder</li>
+<li>1 tablespoon paprika</li>
+<li>1 tablespoon ground cumin</li>
+<li>10 pounds pork baby back ribs</li>
+<li>1 cup apple juice</li>
+<li>1/4 cup brown sugar (packed)</li>
+<li>1/4 cup barbecue sauce</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org306fa41" class="outline-3">
+<h3 id="org306fa41"><span class="section-number-3">18.2</span> Method</h3>
+<div class="outline-text-3" id="text-18-2">
+<ul class="org-ul">
+<li>Stir salt, white sugar, 2 tablespoons brown sugar, black pepper, white
+pepper, onion powder, garlic powder, chili powder, paprika, and cumin
+together in a small bowl to make the dry rub. Rub the spice mixture
+into the baby back ribs on all sides. Wrap the ribs well with plastic
+wrap, and refrigerate for at least 30 minutes prior to cooking.</li>
+<li>Unwrap baby back ribs and place onto the wire racks of the smoker in a
+single layer.</li>
+<li>Place the racks into a smoker, fill the smoker pan with apple, grape,
+pear, or cherry chips, and bring the smoker to 270 degrees F (130
+degrees C). Smoke for 1 hour.</li>
+<li>Stir together the apple juice, 1/4 cup brown sugar, and the barbeque
+sauce. Brush the ribs with the sauce every 30 to 45 minutes after the
+first hour. Cook the ribs in the smoker until the meat is no longer
+pink and begins to "shrink" back from the bones, 3 to 4 hours. Brush
+the sauce onto the ribs one last time 30 minutes before the ribs are
+ready to be taken out of the smoker.</li>
+<li>Once the ribs are done, wrap them tightly with aluminum foil, and
+allow to rest 10 to 15 minutes. This will allow the juices to reabsorb
+into the meat and make the ribs moist.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d2ad0e" class="outline-2">
+<h2 id="org8d2ad0e"><span class="section-number-2">19</span> Beef and Ale Pie</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+<div id="outline-container-orgf8aae03" class="outline-3">
+<h3 id="orgf8aae03"><span class="section-number-3">19.1</span> Ingredients</h3>
+<div class="outline-text-3" id="text-19-1">
+</div>
+<div id="outline-container-org009fa91" class="outline-4">
+<h4 id="org009fa91"><span class="section-number-4">19.1.1</span> Meat</h4>
+<div class="outline-text-4" id="text-19-1-1">
+<ul class="org-ul">
+<li>small handful dried porcini mushrooms (about 10g) - not essential but
+very tasty</li>
+<li>2 tbsp vegetable oil</li>
+<li>1kg braising steak (buy this as a whole piece and cut it yourself into
+large chunks)</li>
+<li>2 large onions</li>
+<li>Onion roughly chopped</li>
+<li>4 large carrots chopped into large chunks</li>
+<li>2 tsp golden caster sugar</li>
+<li>4 tbsp plain flour</li>
+<li>300ml dark ale</li>
+<li>2 beef stock cubes mixed with 400ml boiling water</li>
+<li>small bunch each thyme bay leaf and parsley, tied together</li>
+<li>200g smoked bacon lardons, or chopped rashers</li>
+<li>200g chestnut mushroom, halved</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge6f22bc" class="outline-4">
+<h4 id="orge6f22bc"><span class="section-number-4">19.1.2</span> For the pastry</h4>
+<div class="outline-text-4" id="text-19-1-2">
+<ul class="org-ul">
+<li>650g plain flour, plus extra for dusting</li>
+<li>250g lard or cold butter (or half of each), diced, plus extra for
+greasing</li>
+<li>1 egg yolk, beaten, to glaze</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9bfc0cd" class="outline-3">
+<h3 id="org9bfc0cd"><span class="section-number-3">19.2</span> Method</h3>
+<div class="outline-text-3" id="text-19-2">
+<ul class="org-ul">
+<li>Start by braising the beef. If you're using the porcini, cover them in
+boiling water for 20 mins, then squeeze out but keep the soaking
+water. Heat oven to 160C/140C fan/gas 3. Heat half the oil in a large
+casserole dish, brown the meat really well in batches, then set aside.</li>
+<li>Add the onions and carrots to the pan, adding a drizzle more oil, then
+cook on a low heat for 5 mins until coloured. Add the soaked
+mushrooms, sizzle for 1 min more, then scatter over the sugar and
+flour, stirring until the flour turns brown. Tip the meat and any
+juices back into the pan and give it all a good stir. Pour over the
+ale, stock and porcini soaking liquid, discarding the last few drops.
+Season stew, tuck in the herbs and bring everything to a simmer. Cover
+with a lid and place in the oven for about 2 hrs, until the meat is
+really tender.</li>
+<li>While the stew is cooking, heat a drop more oil in a frying pan and
+sizzle the bacon for 3 mins until crisp. Turn up the heat, add the
+mushrooms and cook for 4 mins until golden. Remove from the heat and,
+when the stew is cooked, stir them through.</li>
+<li>Leave everything to cool completely &#x2013; better still, make this up to 2
+days in advance and keep it in the fridge as the pie will be better if
+the filling is fridge-cold when added. Can also be frozen for up to 3
+months and defrosted when needed.</li>
+<li>Make the pastry up to 2 days before you want to assemble the pie.
+Crumble the flour and lard, or butter, together with a generous pinch
+of sea salt until completely combined, then add up to 200ml ice-cold
+water to make a soft dough. This can be done in a food processor if
+you want.</li>
+<li>Knead the pastry, then wrap in cling film and leave to rest in the
+fridge for at least 1 hr. The pastry can be made up to 2 days ahead
+and kept in the fridge or frozen for up to a month.</li>
+<li>When you want to make the pie, heat oven to 220C/200C fan/gas 7 and
+place a flat baking tray in the oven. Heavily grease a 24-28cm pie
+dish and dust well with flour. Cut a third off the pastry and set
+aside. Roll out the pastry to a thick-ish round that will easily line
+the pie dish with an overhang, then line the tin.</li>
+<li>Add the beef to the dish using a slotted spoon so some gravy is left
+in the container, as you don't want too much sauce in the pie. You
+want the filling to be slightly higher than the rim of the dish. If
+you have a bit too much, set it aside.</li>
+<li>Roll out the remaining pastry to a thick round big enough to cover the
+dish. Brush the edges of the pastry in the dish with egg yolk, then
+cover with the pastry lid. Trim the edges, crimp the pastry, then
+re-roll your trimmings to make a decoration, if you like &#x2013; I always
+decorate my pies with pastry leaves. Brush the top heavily with egg.
+Make a few little slits in the centre of the pie, place on the hot
+baking tray.</li>
+<li>Bake for 40 mins until golden. Leave the pie to rest for 10 mins while
+you heat up the gravy left in the container. Serve the pie at the
+table with a jug of gravy and a big pile of something green and leafy.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Marc Scott</p>
+<p class="date">Created: 2019-10-08 Tue 14:55</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
