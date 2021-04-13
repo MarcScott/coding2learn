@@ -3,189 +3,16 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-10-08 Tue 14:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Marc Scott" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -233,156 +60,47 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1581a8f">1. Copycat KFC</a>
-<ul>
-<li><a href="#org31d7e18">1.1. Ingredients</a></li>
-<li><a href="#org3b0fc6e">1.2. Method</a></li>
-<li><a href="#orgefbc359">1.3. Notes</a>
-<ul>
-<li><a href="#orgdb8adb1">1.3.1. 2018-03-08</a></li>
-<li><a href="#orgc63e5b1">1.3.2. <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orga8d9b69">2. Salsa</a>
-<ul>
-<li><a href="#org8122da0">2.1. Ingredients</a></li>
-<li><a href="#org563c9fd">2.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#orge20520b">3. Tacos</a>
-<ul>
-<li><a href="#orgb4a3c3b">3.1. Ingredients</a></li>
-<li><a href="#org118c7ee">3.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#orgb166b3a">4. Fajitas</a></li>
-<li><a href="#org332dbe9">5. Hot wings</a>
-<ul>
-<li><a href="#org19a7f9f">5.1. Ingredients</a></li>
-<li><a href="#orgcb7ed32">5.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org8171228">6. Beef Pad Thai</a>
-<ul>
-<li><a href="#orgcd08b33">6.1. Ingredients</a></li>
-<li><a href="#orgb8d4be2">6.2. Instructions</a>
-<ul>
-<li><a href="#org058aaad">6.2.1. Thai Peanut Sauce Preparation:</a></li>
-<li><a href="#orgf9a02ea">6.2.2. Beef Pad Thai Preparation:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org1556fd2">7. Silverside Roast Beef</a>
-<ul>
-<li><a href="#orgef0d47c">7.1. Ingredints</a></li>
-<li><a href="#orgffbf132">7.2. Method</a></li>
-<li><a href="#org0c90598">7.3. Notes</a></li>
-</ul>
-</li>
-<li><a href="#org2e68cb6">8. Crispy Pork Belly</a>
-<ul>
-<li><a href="#org72d6ae6">8.1. Ingredients</a></li>
-<li><a href="#orgfec5525">8.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org6244bdd">9. Yorkshire Puddings</a>
-<ul>
-<li><a href="#org6559889">9.1. Ingredients</a></li>
-<li><a href="#org12e5334">9.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org6352913">10. Roast Poatoes</a>
-<ul>
-<li><a href="#org2e7b195">10.1. Ingredients</a></li>
-<li><a href="#orge798e17">10.2. Method</a></li>
-<li><a href="#orga2cd9ed">10.3. Notes</a></li>
-</ul>
-</li>
-<li><a href="#org3e968e6">11. Gravy</a>
-<ul>
-<li><a href="#orgeb7fa1a">11.1. Ingredients</a></li>
-<li><a href="#org806d0e5">11.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org8df061a">12. Sauteed Kale</a>
-<ul>
-<li><a href="#org635ac59">12.1. Ingredients</a></li>
-<li><a href="#org2a28b22">12.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#orgb93476a">13. French Fries</a>
-<ul>
-<li><a href="#org1ae05eb">13.1. Ingredients</a></li>
-<li><a href="#org2170ab7">13.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org09c9e44">14. Burgers</a>
-<ul>
-<li><a href="#orge234e56">14.1. Ingredients</a>
-<ul>
-<li><a href="#org175aba5">14.1.1. Stirins</a></li>
-</ul>
-</li>
-<li><a href="#orgbb71394">14.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org5fdd92d">15. Peri Peri Chicken</a>
-<ul>
-<li><a href="#orge5ce02f">15.1. Ingredients</a>
-<ul>
-<li><a href="#org9520fd2">15.1.1. Peri Peri Marinade:</a></li>
-</ul>
-</li>
-<li><a href="#org6c9d7e5">15.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org834f549">16. Garlic Rice</a>
-<ul>
-<li><a href="#org8dd0085">16.1. Ingredients</a></li>
-<li><a href="#org737e37b">16.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#orgd64b4d6">17. BBQ Brisket</a>
-<ul>
-<li><a href="#org0f9ce45">17.1. Ingredients</a>
-<ul>
-<li><a href="#orgde69785">17.1.1. Rub:</a></li>
-<li><a href="#org55f58b1">17.1.2. BBQ Sauce:</a></li>
-</ul>
-</li>
-<li><a href="#org5012767">17.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org63b87f2">18. Pork ribs</a>
-<ul>
-<li><a href="#org4ab92e5">18.1. Ingredients</a></li>
-<li><a href="#org306fa41">18.2. Method</a></li>
-</ul>
-</li>
-<li><a href="#org8d2ad0e">19. Beef and Ale Pie</a>
-<ul>
-<li><a href="#orgf8aae03">19.1. Ingredients</a>
-<ul>
-<li><a href="#org009fa91">19.1.1. Meat</a></li>
-<li><a href="#orge6f22bc">19.1.2. For the pastry</a></li>
-</ul>
-</li>
-<li><a href="#org9bfc0cd">19.2. Method</a></li>
-</ul>
-</li>
+<li><a href="#orgf31380d">1. Copycat KFC</a></li>
+<li><a href="#orgf1df8b8">2. Salsa</a></li>
+<li><a href="#orgf77c8a4">3. Tacos</a></li>
+<li><a href="#orgabfe4b6">4. Fajitas</a></li>
+<li><a href="#org34caaa7">5. Hot wings</a></li>
+<li><a href="#org1d92cff">6. Beef Pad Thai</a></li>
+<li><a href="#orge7b117b">7. Silverside Roast Beef</a></li>
+<li><a href="#org33e40d3">8. Crispy Pork Belly</a></li>
+<li><a href="#org21a527d">9. Yorkshire Puddings</a></li>
+<li><a href="#org563e262">10. Roast Poatoes</a></li>
+<li><a href="#orgbed15e1">11. Gravy</a></li>
+<li><a href="#orgedfef6a">12. Sauteed Kale</a></li>
+<li><a href="#org93ef970">13. French Fries</a></li>
+<li><a href="#org4586f83">14. Burgers</a></li>
+<li><a href="#org0de347b">15. Peri Peri Chicken</a></li>
+<li><a href="#org07e41bb">16. Garlic Rice</a></li>
+<li><a href="#orgb9103c3">17. BBQ Brisket</a></li>
+<li><a href="#org777f008">18. Pork ribs</a></li>
+<li><a href="#orgbfc75dc">19. Beef and Ale Pie</a></li>
+<li><a href="#orgec794a7">20. Meatloaf</a></li>
+<li><a href="#orgcc99314">21. Gumbo</a></li>
+<li><a href="#orgf9c59f2">22. Oxtail Stew</a></li>
+<li><a href="#org2e89f26">23. Pork belly slow roast</a></li>
+<li><a href="#org5b762f9">24. Baked Portobello Mushrooms</a></li>
+<li><a href="#org6e52d49">25. Spaghetti Bolognese</a></li>
+<li><a href="#org078028d">26. Peppered mackeral fishcakes</a></li>
+<li><a href="#org1ae786d">27. Sausage and bean casserole</a></li>
+<li><a href="#org452d980">28. Braised Leeks</a></li>
+<li><a href="#org1412528">29. Fried Green Beans</a></li>
+<li><a href="#org1f5fc06">30. Tuna Steaks (Mediterranean)</a></li>
+<li><a href="#org5116738">31. BBQ Pork Ribs</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1581a8f" class="outline-2">
-<h2 id="org1581a8f"><span class="section-number-2">1</span> Copycat KFC</h2>
+<div id="outline-container-orgf31380d" class="outline-2">
+<h2 id="orgf31380d"><span class="section-number-2">1</span> Copycat KFC</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org31d7e18" class="outline-3">
-<h3 id="org31d7e18"><span class="section-number-3">1.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org18554db" class="outline-3">
+<h3 id="org18554db">Ingredients</h3>
+<div class="outline-text-3" id="text-org18554db">
 <ul class="org-ul">
 <li>1 whole chicken (2 breasts, 2 thighs, 2 drumsticks, 2 wings)</li>
 <li>2 quarts neutral oil, for frying</li>
@@ -404,9 +122,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org3b0fc6e" class="outline-3">
-<h3 id="org3b0fc6e"><span class="section-number-3">1.2</span> Method</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgdcd95a4" class="outline-3">
+<h3 id="orgdcd95a4">Method</h3>
+<div class="outline-text-3" id="text-orgdcd95a4">
 <ol class="org-ol">
 <li>Preheat fryer to 150°C. Thoroughly mix together all the spice mix
 ingredients.</li>
@@ -424,13 +142,13 @@ fryer. Serve hot.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgefbc359" class="outline-3">
-<h3 id="orgefbc359"><span class="section-number-3">1.3</span> Notes</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org48baf2e" class="outline-3">
+<h3 id="org48baf2e">Notes</h3>
+<div class="outline-text-3" id="text-org48baf2e">
 </div>
-<div id="outline-container-orgdb8adb1" class="outline-4">
-<h4 id="orgdb8adb1"><span class="section-number-4">1.3.1</span> 2018-03-08</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgc2d4355" class="outline-4">
+<h4 id="orgc2d4355">2018-03-08</h4>
+<div class="outline-text-4" id="text-orgc2d4355">
 <ul class="org-ul">
 <li>Tried doubling all spices (not flour)</li>
 <li>2 egg whites</li>
@@ -438,9 +156,9 @@ fryer. Serve hot.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc63e5b1" class="outline-4">
-<h4 id="orgc63e5b1"><span class="section-number-4">1.3.2</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span></h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-org6136d08" class="outline-4">
+<h4 id="org6136d08"><span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span></h4>
+<div class="outline-text-4" id="text-org6136d08">
 <ul class="org-ul">
 <li>cooked for 15 minutes for breast and 20 minutes for legs and thighs on
 150 degrees</li>
@@ -449,13 +167,13 @@ fryer. Serve hot.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orga8d9b69" class="outline-2">
-<h2 id="orga8d9b69"><span class="section-number-2">2</span> Salsa</h2>
+<div id="outline-container-orgf1df8b8" class="outline-2">
+<h2 id="orgf1df8b8"><span class="section-number-2">2</span> Salsa</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org8122da0" class="outline-3">
-<h3 id="org8122da0"><span class="section-number-3">2.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-orga709d7e" class="outline-3">
+<h3 id="orga709d7e">Ingredients</h3>
+<div class="outline-text-3" id="text-orga709d7e">
 <ul class="org-ul">
 <li>6 ripe tomatoes</li>
 <li>1 red pepper</li>
@@ -469,9 +187,9 @@ fryer. Serve hot.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org563c9fd" class="outline-3">
-<h3 id="org563c9fd"><span class="section-number-3">2.2</span> Method</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-orgd0f2c33" class="outline-3">
+<h3 id="orgd0f2c33">Method</h3>
+<div class="outline-text-3" id="text-orgd0f2c33">
 <ul class="org-ul">
 <li>Finely chop the tomatoes and coriander (stalks and all) and place into
 a large bowl.</li>
@@ -486,13 +204,13 @@ those flavours develop.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orge20520b" class="outline-2">
-<h2 id="orge20520b"><span class="section-number-2">3</span> Tacos</h2>
+<div id="outline-container-orgf77c8a4" class="outline-2">
+<h2 id="orgf77c8a4"><span class="section-number-2">3</span> Tacos</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgb4a3c3b" class="outline-3">
-<h3 id="orgb4a3c3b"><span class="section-number-3">3.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org7d26e89" class="outline-3">
+<h3 id="org7d26e89">Ingredients</h3>
+<div class="outline-text-3" id="text-org7d26e89">
 <ul class="org-ul">
 <li>500g beef mince</li>
 <li>1 onion, chopped</li>
@@ -510,9 +228,9 @@ those flavours develop.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org118c7ee" class="outline-3">
-<h3 id="org118c7ee"><span class="section-number-3">3.2</span> Method</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org6ae8d01" class="outline-3">
+<h3 id="org6ae8d01">Method</h3>
+<div class="outline-text-3" id="text-org6ae8d01">
 <ul class="org-ul">
 <li>Dry-fry the mince in a frying pan until brown and crumbly, stirring
 occasionally and breaking it up with a wooden spoon.</li>
@@ -528,16 +246,16 @@ until golden. Serve with your choice of accompaniments.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb166b3a" class="outline-2">
-<h2 id="orgb166b3a"><span class="section-number-2">4</span> Fajitas</h2>
+<div id="outline-container-orgabfe4b6" class="outline-2">
+<h2 id="orgabfe4b6"><span class="section-number-2">4</span> Fajitas</h2>
 </div>
-<div id="outline-container-org332dbe9" class="outline-2">
-<h2 id="org332dbe9"><span class="section-number-2">5</span> Hot wings</h2>
+<div id="outline-container-org34caaa7" class="outline-2">
+<h2 id="org34caaa7"><span class="section-number-2">5</span> Hot wings</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org19a7f9f" class="outline-3">
-<h3 id="org19a7f9f"><span class="section-number-3">5.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org8c45024" class="outline-3">
+<h3 id="org8c45024">Ingredients</h3>
+<div class="outline-text-3" id="text-org8c45024">
 <ul class="org-ul">
 <li>3/4 cup all-purpose flour</li>
 <li>1/2 teaspoon cayenne pepper</li>
@@ -549,9 +267,9 @@ until golden. Serve with your choice of accompaniments.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcb7ed32" class="outline-3">
-<h3 id="orgcb7ed32"><span class="section-number-3">5.2</span> Method</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-org63ab2f7" class="outline-3">
+<h3 id="org63ab2f7">Method</h3>
+<div class="outline-text-3" id="text-org63ab2f7">
 <ul class="org-ul">
 <li>Line a baking sheet with aluminum foil, and lightly grease with
 cooking spray. Place the flour, cayenne pepper, garlic powder, and
@@ -567,13 +285,13 @@ Bake in the preheated oven until the chicken is no longer pink</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org8171228" class="outline-2">
-<h2 id="org8171228"><span class="section-number-2">6</span> Beef Pad Thai</h2>
+<div id="outline-container-org1d92cff" class="outline-2">
+<h2 id="org1d92cff"><span class="section-number-2">6</span> Beef Pad Thai</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgcd08b33" class="outline-3">
-<h3 id="orgcd08b33"><span class="section-number-3">6.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-orgb606422" class="outline-3">
+<h3 id="orgb606422">Ingredients</h3>
+<div class="outline-text-3" id="text-orgb606422">
 <ul class="org-ul">
 <li>1 cup dry roasted peanuts</li>
 <li>1⁄3 cup water</li>
@@ -606,13 +324,13 @@ whole-wheat spaghetti</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb8d4be2" class="outline-3">
-<h3 id="orgb8d4be2"><span class="section-number-3">6.2</span> Instructions</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-orge05668d" class="outline-3">
+<h3 id="orge05668d">Instructions</h3>
+<div class="outline-text-3" id="text-orge05668d">
 </div>
-<div id="outline-container-org058aaad" class="outline-4">
-<h4 id="org058aaad"><span class="section-number-4">6.2.1</span> Thai Peanut Sauce Preparation:</h4>
-<div class="outline-text-4" id="text-6-2-1">
+<div id="outline-container-org675035b" class="outline-4">
+<h4 id="org675035b">Thai Peanut Sauce Preparation:</h4>
+<div class="outline-text-4" id="text-org675035b">
 <ul class="org-ul">
 <li>Place the first 12 ingredients (from the peanuts to the lime zest), in
 a blender.</li>
@@ -624,9 +342,9 @@ fresh limejuice.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf9a02ea" class="outline-4">
-<h4 id="orgf9a02ea"><span class="section-number-4">6.2.2</span> Beef Pad Thai Preparation:</h4>
-<div class="outline-text-4" id="text-6-2-2">
+<div id="outline-container-org50f6cc7" class="outline-4">
+<h4 id="org50f6cc7">Beef Pad Thai Preparation:</h4>
+<div class="outline-text-4" id="text-org50f6cc7">
 <ul class="org-ul">
 <li>Cook the noodles according to the package directions. Drain, transfer
 to a large bowl, and cover with aluminum foil or plastic wrap to keep
@@ -647,13 +365,13 @@ microwave for about 3 minutes on LOW before using.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org1556fd2" class="outline-2">
-<h2 id="org1556fd2"><span class="section-number-2">7</span> Silverside Roast Beef</h2>
+<div id="outline-container-orge7b117b" class="outline-2">
+<h2 id="orge7b117b"><span class="section-number-2">7</span> Silverside Roast Beef</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgef0d47c" class="outline-3">
-<h3 id="orgef0d47c"><span class="section-number-3">7.1</span> Ingredints</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-org53e20f4" class="outline-3">
+<h3 id="org53e20f4">Ingredints</h3>
+<div class="outline-text-3" id="text-org53e20f4">
 <ul class="org-ul">
 <li>Silver side beef joint</li>
 <li>1 tbsp beef dripping or butter</li>
@@ -667,9 +385,9 @@ microwave for about 3 minutes on LOW before using.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgffbf132" class="outline-3">
-<h3 id="orgffbf132"><span class="section-number-3">7.2</span> Method</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-org0259228" class="outline-3">
+<h3 id="org0259228">Method</h3>
+<div class="outline-text-3" id="text-org0259228">
 <ul class="org-ul">
 <li>Preheat the oven to 210°C. Rub the rolled silverside joint with the
 beef dripping and sprinkle with plenty of salt and pepper.</li>
@@ -691,9 +409,9 @@ of gravy and your favourite green leafy vegetable, such as spinach.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0c90598" class="outline-3">
-<h3 id="org0c90598"><span class="section-number-3">7.3</span> Notes</h3>
-<div class="outline-text-3" id="text-7-3">
+<div id="outline-container-orgd77ca02" class="outline-3">
+<h3 id="orgd77ca02">Notes</h3>
+<div class="outline-text-3" id="text-orgd77ca02">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-04-29 Sun&gt;</span></span>
 </p>
@@ -713,13 +431,13 @@ of gravy and your favourite green leafy vegetable, such as spinach.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org2e68cb6" class="outline-2">
-<h2 id="org2e68cb6"><span class="section-number-2">8</span> Crispy Pork Belly</h2>
+<div id="outline-container-org33e40d3" class="outline-2">
+<h2 id="org33e40d3"><span class="section-number-2">8</span> Crispy Pork Belly</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org72d6ae6" class="outline-3">
-<h3 id="org72d6ae6"><span class="section-number-3">8.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-org484e8ef" class="outline-3">
+<h3 id="org484e8ef">Ingredients</h3>
+<div class="outline-text-3" id="text-org484e8ef">
 <ul class="org-ul">
 <li>1/2 pound whole pork belly, skin removed</li>
 <li>1/2 teaspoon smoked paprika, or to taste</li>
@@ -728,9 +446,9 @@ of gravy and your favourite green leafy vegetable, such as spinach.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfec5525" class="outline-3">
-<h3 id="orgfec5525"><span class="section-number-3">8.2</span> Method</h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-org80f7aee" class="outline-3">
+<h3 id="org80f7aee">Method</h3>
+<div class="outline-text-3" id="text-org80f7aee">
 <ul class="org-ul">
 <li>Preheat oven to 200 degrees F (95 degrees C).</li>
 <li>Season pork belly all over with smoked paprika, salt, and black
@@ -752,13 +470,13 @@ to a plate, drizzle with olive oil and season with pepper.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org6244bdd" class="outline-2">
-<h2 id="org6244bdd"><span class="section-number-2">9</span> Yorkshire Puddings</h2>
+<div id="outline-container-org21a527d" class="outline-2">
+<h2 id="org21a527d"><span class="section-number-2">9</span> Yorkshire Puddings</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org6559889" class="outline-3">
-<h3 id="org6559889"><span class="section-number-3">9.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-9-1">
+<div id="outline-container-orgacb9b0d" class="outline-3">
+<h3 id="orgacb9b0d">Ingredients</h3>
+<div class="outline-text-3" id="text-orgacb9b0d">
 <ul class="org-ul">
 <li>4oz Flour</li>
 <li>8oz Milk</li>
@@ -768,9 +486,9 @@ to a plate, drizzle with olive oil and season with pepper.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org12e5334" class="outline-3">
-<h3 id="org12e5334"><span class="section-number-3">9.2</span> Method</h3>
-<div class="outline-text-3" id="text-9-2">
+<div id="outline-container-org34651a1" class="outline-3">
+<h3 id="org34651a1">Method</h3>
+<div class="outline-text-3" id="text-org34651a1">
 <ul class="org-ul">
 <li>Oven temperature to 210°C.</li>
 <li>In a large bowl mix the flour and salt, make a well in the centre,
@@ -788,13 +506,13 @@ necessary.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org6352913" class="outline-2">
-<h2 id="org6352913"><span class="section-number-2">10</span> Roast Poatoes</h2>
+<div id="outline-container-org563e262" class="outline-2">
+<h2 id="org563e262"><span class="section-number-2">10</span> Roast Poatoes</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org2e7b195" class="outline-3">
-<h3 id="org2e7b195"><span class="section-number-3">10.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-10-1">
+<div id="outline-container-org0dbd713" class="outline-3">
+<h3 id="org0dbd713">Ingredients</h3>
+<div class="outline-text-3" id="text-org0dbd713">
 <ul class="org-ul">
 <li>Potatoes</li>
 <li>2 tbsp plain flour</li>
@@ -802,9 +520,9 @@ necessary.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge798e17" class="outline-3">
-<h3 id="orge798e17"><span class="section-number-3">10.2</span> Method</h3>
-<div class="outline-text-3" id="text-10-2">
+<div id="outline-container-orgbfe594a" class="outline-3">
+<h3 id="orgbfe594a">Method</h3>
+<div class="outline-text-3" id="text-orgbfe594a">
 <ul class="org-ul">
 <li>An hour before roast is ready, start the potatoes</li>
 <li>Peel and halve potatoes and bring to boil in a pan of cold water. Boil
@@ -817,22 +535,22 @@ minutes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga2cd9ed" class="outline-3">
-<h3 id="orga2cd9ed"><span class="section-number-3">10.3</span> Notes</h3>
-<div class="outline-text-3" id="text-10-3">
+<div id="outline-container-org0a7e8ba" class="outline-3">
+<h3 id="org0a7e8ba">Notes</h3>
+<div class="outline-text-3" id="text-org0a7e8ba">
 <ul class="org-ul">
 <li>Used Gooes fat - and worked amazingly well</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org3e968e6" class="outline-2">
-<h2 id="org3e968e6"><span class="section-number-2">11</span> Gravy</h2>
+<div id="outline-container-orgbed15e1" class="outline-2">
+<h2 id="orgbed15e1"><span class="section-number-2">11</span> Gravy</h2>
 <div class="outline-text-2" id="text-11">
 </div>
-<div id="outline-container-orgeb7fa1a" class="outline-3">
-<h3 id="orgeb7fa1a"><span class="section-number-3">11.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-11-1">
+<div id="outline-container-org06b2eaa" class="outline-3">
+<h3 id="org06b2eaa">Ingredients</h3>
+<div class="outline-text-3" id="text-org06b2eaa">
 <ul class="org-ul">
 <li>100 ml red/white wine</li>
 <li>100 ml water</li>
@@ -840,9 +558,9 @@ minutes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org806d0e5" class="outline-3">
-<h3 id="org806d0e5"><span class="section-number-3">11.2</span> Method</h3>
-<div class="outline-text-3" id="text-11-2">
+<div id="outline-container-org0f88787" class="outline-3">
+<h3 id="org0f88787">Method</h3>
+<div class="outline-text-3" id="text-org0f88787">
 <ul class="org-ul">
 <li>Discard any fat from the surface of the pan juices, and with the pan
 over a medium heat stir in the wine and gather up all the sticky bits,
@@ -854,13 +572,13 @@ necessary.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org8df061a" class="outline-2">
-<h2 id="org8df061a"><span class="section-number-2">12</span> Sauteed Kale</h2>
+<div id="outline-container-orgedfef6a" class="outline-2">
+<h2 id="orgedfef6a"><span class="section-number-2">12</span> Sauteed Kale</h2>
 <div class="outline-text-2" id="text-12">
 </div>
-<div id="outline-container-org635ac59" class="outline-3">
-<h3 id="org635ac59"><span class="section-number-3">12.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-12-1">
+<div id="outline-container-org3f84664" class="outline-3">
+<h3 id="org3f84664">Ingredients</h3>
+<div class="outline-text-3" id="text-org3f84664">
 <ul class="org-ul">
 <li>1 pound kale leaves (dark green, stem removed and leaves chopped, then
 washed and dried)</li>
@@ -874,9 +592,9 @@ shallots)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a28b22" class="outline-3">
-<h3 id="org2a28b22"><span class="section-number-3">12.2</span> Method</h3>
-<div class="outline-text-3" id="text-12-2">
+<div id="outline-container-org9460865" class="outline-3">
+<h3 id="org9460865">Method</h3>
+<div class="outline-text-3" id="text-org9460865">
 <ul class="org-ul">
 <li>Chop the onion or shallots and finely mince the garlic, then heat oil
 in heavy frying pan until it's medium-hot and saute onion 3-4 minutes
@@ -899,13 +617,13 @@ season as desired with vinegar and serve hot or warm.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb93476a" class="outline-2">
-<h2 id="orgb93476a"><span class="section-number-2">13</span> French Fries</h2>
+<div id="outline-container-org93ef970" class="outline-2">
+<h2 id="org93ef970"><span class="section-number-2">13</span> French Fries</h2>
 <div class="outline-text-2" id="text-13">
 </div>
-<div id="outline-container-org1ae05eb" class="outline-3">
-<h3 id="org1ae05eb"><span class="section-number-3">13.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-org3bddb12" class="outline-3">
+<h3 id="org3bddb12">Ingredients</h3>
+<div class="outline-text-3" id="text-org3bddb12">
 <ul class="org-ul">
 <li>8 cups cold water</li>
 <li>2 tablespoons fine sea salt</li>
@@ -915,9 +633,9 @@ season as desired with vinegar and serve hot or warm.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2170ab7" class="outline-3">
-<h3 id="org2170ab7"><span class="section-number-3">13.2</span> Method</h3>
-<div class="outline-text-3" id="text-13-2">
+<div id="outline-container-orgfe1671f" class="outline-3">
+<h3 id="orgfe1671f">Method</h3>
+<div class="outline-text-3" id="text-orgfe1671f">
 <ul class="org-ul">
 <li>PEEL 4 medium russet potatoes; CUT potatoes into 1/4" shoestrings (try
 to make them as uniform as possible; I use an adjustable-blade
@@ -945,13 +663,13 @@ potatoes.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org09c9e44" class="outline-2">
-<h2 id="org09c9e44"><span class="section-number-2">14</span> Burgers</h2>
+<div id="outline-container-org4586f83" class="outline-2">
+<h2 id="org4586f83"><span class="section-number-2">14</span> Burgers</h2>
 <div class="outline-text-2" id="text-14">
 </div>
-<div id="outline-container-orge234e56" class="outline-3">
-<h3 id="orge234e56"><span class="section-number-3">14.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-14-1">
+<div id="outline-container-org107a430" class="outline-3">
+<h3 id="org107a430">Ingredients</h3>
+<div class="outline-text-3" id="text-org107a430">
 <ul class="org-ul">
 <li>1 egg</li>
 <li>1 teaspoon mustard (regular or Dijon)</li>
@@ -963,9 +681,9 @@ potatoes.</li>
 <li>500g medium ground beef</li>
 </ul>
 </div>
-<div id="outline-container-org175aba5" class="outline-4">
-<h4 id="org175aba5"><span class="section-number-4">14.1.1</span> Stirins</h4>
-<div class="outline-text-4" id="text-14-1-1">
+<div id="outline-container-orgebce173" class="outline-4">
+<h4 id="orgebce173">Stirins</h4>
+<div class="outline-text-4" id="text-orgebce173">
 <ul class="org-ul">
 <li>1 teaspoon dried mixed herbs</li>
 <li>2 teaspoons cajun seasoning</li>
@@ -974,9 +692,9 @@ potatoes.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb71394" class="outline-3">
-<h3 id="orgbb71394"><span class="section-number-3">14.2</span> Method</h3>
-<div class="outline-text-3" id="text-14-2">
+<div id="outline-container-org05d9c89" class="outline-3">
+<h3 id="org05d9c89">Method</h3>
+<div class="outline-text-3" id="text-org05d9c89">
 <ul class="org-ul">
 <li>Lightly oil grill</li>
 <li>Whisk egg in a bowl&amp; add next 6 ingredients.</li>
@@ -994,13 +712,13 @@ minutes)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org5fdd92d" class="outline-2">
-<h2 id="org5fdd92d"><span class="section-number-2">15</span> Peri Peri Chicken</h2>
+<div id="outline-container-org0de347b" class="outline-2">
+<h2 id="org0de347b"><span class="section-number-2">15</span> Peri Peri Chicken</h2>
 <div class="outline-text-2" id="text-15">
 </div>
-<div id="outline-container-orge5ce02f" class="outline-3">
-<h3 id="orge5ce02f"><span class="section-number-3">15.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-15-1">
+<div id="outline-container-org9fcc6a1" class="outline-3">
+<h3 id="org9fcc6a1">Ingredients</h3>
+<div class="outline-text-3" id="text-org9fcc6a1">
 <ul class="org-ul">
 <li>4 chicken breasts (I used skinless and boneless)</li>
 <li>Salt and pepper to taste</li>
@@ -1011,9 +729,9 @@ minutes)</li>
 <li>2 sprigs fresh rosemary</li>
 </ul>
 </div>
-<div id="outline-container-org9520fd2" class="outline-4">
-<h4 id="org9520fd2"><span class="section-number-4">15.1.1</span> Peri Peri Marinade:</h4>
-<div class="outline-text-4" id="text-15-1-1">
+<div id="outline-container-org289fac9" class="outline-4">
+<h4 id="org289fac9">Peri Peri Marinade:</h4>
+<div class="outline-text-4" id="text-org289fac9">
 <ul class="org-ul">
 <li>3 cloves garlic, peeled and roughly chopped</li>
 <li>1/2 teaspoon crushed red pepper flakes</li>
@@ -1025,9 +743,9 @@ minutes)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org6c9d7e5" class="outline-3">
-<h3 id="org6c9d7e5"><span class="section-number-3">15.2</span> Method</h3>
-<div class="outline-text-3" id="text-15-2">
+<div id="outline-container-orgb178a37" class="outline-3">
+<h3 id="orgb178a37">Method</h3>
+<div class="outline-text-3" id="text-orgb178a37">
 <ul class="org-ul">
 <li>To make the peri-peri marinade: place all the ingredients in the bowl
 of a small food processor and process until puréed.</li>
@@ -1051,13 +769,13 @@ rest, covered, for 10 minutes.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org834f549" class="outline-2">
-<h2 id="org834f549"><span class="section-number-2">16</span> Garlic Rice</h2>
+<div id="outline-container-org07e41bb" class="outline-2">
+<h2 id="org07e41bb"><span class="section-number-2">16</span> Garlic Rice</h2>
 <div class="outline-text-2" id="text-16">
 </div>
-<div id="outline-container-org8dd0085" class="outline-3">
-<h3 id="org8dd0085"><span class="section-number-3">16.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-16-1">
+<div id="outline-container-orgc51d629" class="outline-3">
+<h3 id="orgc51d629">Ingredients</h3>
+<div class="outline-text-3" id="text-orgc51d629">
 <ul class="org-ul">
 <li>40g Salted Butter</li>
 <li>9 to 12 Cloves garlic (approximately 2 heaping Tbs)</li>
@@ -1068,9 +786,9 @@ rest, covered, for 10 minutes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org737e37b" class="outline-3">
-<h3 id="org737e37b"><span class="section-number-3">16.2</span> Method</h3>
-<div class="outline-text-3" id="text-16-2">
+<div id="outline-container-orga2705fe" class="outline-3">
+<h3 id="orga2705fe">Method</h3>
+<div class="outline-text-3" id="text-orga2705fe">
 <ul class="org-ul">
 <li>Heat a large thick bottom pot that has lid over low heat. Add butter
 and let it slowly melt.</li>
@@ -1099,21 +817,21 @@ Serve hot and let your guest to mix the rice and garnish. Enjoy!</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd64b4d6" class="outline-2">
-<h2 id="orgd64b4d6"><span class="section-number-2">17</span> BBQ Brisket</h2>
+<div id="outline-container-orgb9103c3" class="outline-2">
+<h2 id="orgb9103c3"><span class="section-number-2">17</span> BBQ Brisket</h2>
 <div class="outline-text-2" id="text-17">
 </div>
-<div id="outline-container-org0f9ce45" class="outline-3">
-<h3 id="org0f9ce45"><span class="section-number-3">17.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-17-1">
+<div id="outline-container-org4e9c73a" class="outline-3">
+<h3 id="org4e9c73a">Ingredients</h3>
+<div class="outline-text-3" id="text-org4e9c73a">
 <ul class="org-ul">
 <li>1.5 &#x2013; 2 kg / 3 &#x2013; 4 lb beef brisket (Note 1)</li>
 <li>500 ml/ 18 fl oz beef stock</li>
 </ul>
 </div>
-<div id="outline-container-orgde69785" class="outline-4">
-<h4 id="orgde69785"><span class="section-number-4">17.1.1</span> Rub:</h4>
-<div class="outline-text-4" id="text-17-1-1">
+<div id="outline-container-orgf1f4a1d" class="outline-4">
+<h4 id="orgf1f4a1d">Rub:</h4>
+<div class="outline-text-4" id="text-orgf1f4a1d">
 <ul class="org-ul">
 <li>1 tbsp brown sugar</li>
 <li>2 tsp paprika powder</li>
@@ -1127,9 +845,9 @@ Serve hot and let your guest to mix the rice and garnish. Enjoy!</li>
 </div>
 </div>
 
-<div id="outline-container-org55f58b1" class="outline-4">
-<h4 id="org55f58b1"><span class="section-number-4">17.1.2</span> BBQ Sauce:</h4>
-<div class="outline-text-4" id="text-17-1-2">
+<div id="outline-container-org6a23c01" class="outline-4">
+<h4 id="org6a23c01">BBQ Sauce:</h4>
+<div class="outline-text-4" id="text-org6a23c01">
 <ul class="org-ul">
 <li>1 tbsp sunflower oil</li>
 <li>1 small onion, finely chopped</li>
@@ -1147,9 +865,9 @@ Serve hot and let your guest to mix the rice and garnish. Enjoy!</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org5012767" class="outline-3">
-<h3 id="org5012767"><span class="section-number-3">17.2</span> Method</h3>
-<div class="outline-text-3" id="text-17-2">
+<div id="outline-container-org449329d" class="outline-3">
+<h3 id="org449329d">Method</h3>
+<div class="outline-text-3" id="text-org449329d">
 <ul class="org-ul">
 <li>To make the barbecue sauce, heat the oil in a frying pan, then cook
 onion and garlic for a few mins until soft. Add the rest of the sauce
@@ -1174,13 +892,13 @@ barbecue sauce on the side.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org63b87f2" class="outline-2">
-<h2 id="org63b87f2"><span class="section-number-2">18</span> Pork ribs</h2>
+<div id="outline-container-org777f008" class="outline-2">
+<h2 id="org777f008"><span class="section-number-2">18</span> Pork ribs</h2>
 <div class="outline-text-2" id="text-18">
 </div>
-<div id="outline-container-org4ab92e5" class="outline-3">
-<h3 id="org4ab92e5"><span class="section-number-3">18.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-18-1">
+<div id="outline-container-orge8b4602" class="outline-3">
+<h3 id="orge8b4602">Ingredients</h3>
+<div class="outline-text-3" id="text-orge8b4602">
 <ul class="org-ul">
 <li>1/4 cup salt</li>
 <li>1/4 cup white sugar</li>
@@ -1199,9 +917,9 @@ barbecue sauce on the side.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org306fa41" class="outline-3">
-<h3 id="org306fa41"><span class="section-number-3">18.2</span> Method</h3>
-<div class="outline-text-3" id="text-18-2">
+<div id="outline-container-orgcd64c32" class="outline-3">
+<h3 id="orgcd64c32">Method</h3>
+<div class="outline-text-3" id="text-orgcd64c32">
 <ul class="org-ul">
 <li>Stir salt, white sugar, 2 tablespoons brown sugar, black pepper, white
 pepper, onion powder, garlic powder, chili powder, paprika, and cumin
@@ -1226,17 +944,17 @@ into the meat and make the ribs moist.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org8d2ad0e" class="outline-2">
-<h2 id="org8d2ad0e"><span class="section-number-2">19</span> Beef and Ale Pie</h2>
+<div id="outline-container-orgbfc75dc" class="outline-2">
+<h2 id="orgbfc75dc"><span class="section-number-2">19</span> Beef and Ale Pie</h2>
 <div class="outline-text-2" id="text-19">
 </div>
-<div id="outline-container-orgf8aae03" class="outline-3">
-<h3 id="orgf8aae03"><span class="section-number-3">19.1</span> Ingredients</h3>
-<div class="outline-text-3" id="text-19-1">
+<div id="outline-container-org919b51b" class="outline-3">
+<h3 id="org919b51b">Ingredients</h3>
+<div class="outline-text-3" id="text-org919b51b">
 </div>
-<div id="outline-container-org009fa91" class="outline-4">
-<h4 id="org009fa91"><span class="section-number-4">19.1.1</span> Meat</h4>
-<div class="outline-text-4" id="text-19-1-1">
+<div id="outline-container-org5f4ccda" class="outline-4">
+<h4 id="org5f4ccda">Meat</h4>
+<div class="outline-text-4" id="text-org5f4ccda">
 <ul class="org-ul">
 <li>small handful dried porcini mushrooms (about 10g) - not essential but
 very tasty</li>
@@ -1256,9 +974,9 @@ large chunks)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge6f22bc" class="outline-4">
-<h4 id="orge6f22bc"><span class="section-number-4">19.1.2</span> For the pastry</h4>
-<div class="outline-text-4" id="text-19-1-2">
+<div id="outline-container-orgb2964e5" class="outline-4">
+<h4 id="orgb2964e5">For the pastry</h4>
+<div class="outline-text-4" id="text-orgb2964e5">
 <ul class="org-ul">
 <li>650g plain flour, plus extra for dusting</li>
 <li>250g lard or cold butter (or half of each), diced, plus extra for
@@ -1269,9 +987,9 @@ greasing</li>
 </div>
 </div>
 
-<div id="outline-container-org9bfc0cd" class="outline-3">
-<h3 id="org9bfc0cd"><span class="section-number-3">19.2</span> Method</h3>
-<div class="outline-text-3" id="text-19-2">
+<div id="outline-container-org16988de" class="outline-3">
+<h3 id="org16988de">Method</h3>
+<div class="outline-text-3" id="text-org16988de">
 <ul class="org-ul">
 <li>Start by braising the beef. If you're using the porcini, cover them in
 boiling water for 20 mins, then squeeze out but keep the soaking
@@ -1325,10 +1043,503 @@ table with a jug of gravy and a big pile of something green and leafy.</li>
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgec794a7" class="outline-2">
+<h2 id="orgec794a7"><span class="section-number-2">20</span> Meatloaf</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+<div id="outline-container-orgf11e00a" class="outline-3">
+<h3 id="orgf11e00a">Ingredients</h3>
+<div class="outline-text-3" id="text-orgf11e00a">
+</div>
+<div id="outline-container-org20eb5a1" class="outline-4">
+<h4 id="org20eb5a1">Meatloaf Ingredients:</h4>
+<div class="outline-text-4" id="text-org20eb5a1">
+<ul class="org-ul">
+<li>2 lbs ground beef 85% or 90% lean</li>
+<li>1 med onion finely chopped</li>
+<li>2 large eggs</li>
+<li>3 garlic cloves minced</li>
+<li>3 Tbsp ketchup</li>
+<li>3 Tbsp fresh parsley finely chopped</li>
+<li>3/4 cup Panko breadcrumbs</li>
+<li>1/3 cup milk</li>
+<li>1 ½ tsp salt or to taste</li>
+<li>1 ½ tsp Italian seasoning</li>
+<li>¼ tsp ground black pepper</li>
+<li>½ tsp ground paprika</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org881defe" class="outline-4">
+<h4 id="org881defe">Meatloaf Sauce Ingredients:</h4>
+<div class="outline-text-4" id="text-org881defe">
+<ul class="org-ul">
+<li>3/4 cup ketchup</li>
+<li>1 ½ tsp white vinegar</li>
+<li>2 ½ Tbsp brown sugar</li>
+<li>1 tsp garlic powder</li>
+<li>½ tsp onion powder</li>
+<li>¼ tsp ground black pepper</li>
+<li>¼ tsp salt</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb4a7664" class="outline-3">
+<h3 id="orgb4a7664">Method</h3>
+<div class="outline-text-3" id="text-orgb4a7664">
+<ol class="org-ol">
+<li>Line a 9”x5” loaf pan with parchment paper and preheat oven to 375°F.</li>
+<li>In a large bowl, add all of the ingredients for the meatloaf. Mix well to 1. combine.</li>
+</ol>
+<p>
+Add meat to the loaf pan, gently press meat down and shape evenly and bake 1. meatloaf at 375˚F for 40 minutes.
+</p>
+<ol class="org-ol">
+<li>In a small bowl, mix all of the ingredients together for the sauce. Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes. 1. Rest meatloaf 10 minutes before slicing. Drizzle with baking juices from the pan.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcc99314" class="outline-2">
+<h2 id="orgcc99314"><span class="section-number-2">21</span> Gumbo</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+<div id="outline-container-org2ba15c6" class="outline-3">
+<h3 id="org2ba15c6">Ingredients</h3>
+<div class="outline-text-3" id="text-org2ba15c6">
+<ul class="org-ul">
+<li>1 x Pack of fresh cut coriander (Leave a little to the side for garnish)</li>
+<li>1 x Pack of fresh cut flat leaf parsley</li>
+<li>4 x Cloves of garlic (more if you wish)</li>
+<li>1 x Root of fresh ginger</li>
+<li>1 x Fresh lemon grass stalk</li>
+<li>2 x White cooking onions</li>
+<li>1 x Vegetable stock cube</li>
+<li>500ml of water</li>
+<li>250ml (1/2 a Carton) of Passata</li>
+<li>1 x Chilli pepper (De-seeded)</li>
+<li>Half a pack of celery</li>
+<li>2 x Bell peppers (I use yellow and red for colour and flavour)</li>
+<li>Plus any additional Vegetables of your choice</li>
+<li>2 x Pack of Aldi frozen raw king prawns £2.29</li>
+<li>1 x Pack of The Fishmonger Scottish Mussels in White Wine Sauce</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga91ffdf" class="outline-3">
+<h3 id="orga91ffdf">Method</h3>
+<div class="outline-text-3" id="text-orga91ffdf">
+<ol class="org-ol">
+<li>In a blender put the 4 x garlic cloves, chilli pepper, half of the coriander, the parsley, onions and half the pealed ginger to finely chop. Simply add to a large pan with a little virgin oil and cook off. If using raw chicken pieces to replace the prawns add them at this stage.</li>
+<li>Add half the water, vegetable stock cube and lemon grass stalk (bash and split the stalk to open it up so the flavours can get out). Simmer to let the flavours from the spices come through for about 10 minutes.</li>
+<li>Add the remaining vegetables and let cook for a further 10 minutes, add salt to taste and more chilli if you want the dish to be hotter. then add and stir in the passata (250ml half a carton) and put to one side.</li>
+<li>In a large pan that has a lid add a knob of butter, garlic, coriander and king prawns, once they turn pink generally 5 – 6 minutes they are cooked and put to one side in a dish, try not to over cook the prawns as they will go chewy.</li>
+<li>Add the mussels and all of the white wine sauce contents from the pack, follow the instructions on the back of the pack for cooking times. Once the mussels are cooked add the king prawns back to the pot and then ladle in the Gumbo broth and vegetables, bring the broth back to simmering.</li>
+<li>If you have guests over I typically wait to do the king prawns and mussels just before we are ready to eat so they’re cooked fresh and hot. Garnish with coriander and pop the pot on the table with the ladle, this is a great rustic sharing dish to serve with crusty bread.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf9c59f2" class="outline-2">
+<h2 id="orgf9c59f2"><span class="section-number-2">22</span> Oxtail Stew</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+<div id="outline-container-org9005fb5" class="outline-3">
+<h3 id="org9005fb5">Ingredients</h3>
+<div class="outline-text-3" id="text-org9005fb5">
+<ul class="org-ul">
+<li>2.5 kg oxtail , chopped into 4cm chunks (ask your butcher to do this)</li>
+<li>olive oil</li>
+<li>2 medium leeks</li>
+<li>2 sticks of celery</li>
+<li>4 medium carrots</li>
+<li>a few sprigs of fresh thyme</li>
+<li>a few sprigs of fresh rosemary</li>
+<li>4 fresh bay leaves</li>
+<li>4 cloves</li>
+<li>2 heaped tablespoons plain flour</li>
+<li>2 x 400 g tins of plum tomatoes</li>
+<li>275 ml porter or red wine</li>
+<li>1 litre organic beef stock , optional</li>
+<li>Worcestershire sauce</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7cd8eeb" class="outline-3">
+<h3 id="org7cd8eeb">Method</h3>
+<div class="outline-text-3" id="text-org7cd8eeb">
+<ol class="org-ol">
+<li>Preheat the oven to 220ºC/425ºF/gas 7. Place a large roasting tray in the oven to preheat.</li>
+<li>Carefully remove the hot tray from the oven, then add the oxtail. Season and drizzle over a lug of olive oil, then toss to coat and place in the hot oven for around 20 minutes, or until golden and caramelized.</li>
+<li>Meanwhile, trim and halve the leeks and celery lengthways, then chop into rough 2cm chunks. Peel and chop the carrots into 2cm pieces, then place into a large ovenproof casserole pan over a medium-low heat with 1 tablespoon of olive oil.</li>
+<li>Pick, roughly chop and add the thyme and rosemary leaves, then add the bay and cook for around 20 minutes, or until soft and sweet, stirring frequently.</li>
+<li>Meanwhile, remove the oxtail from the oven and set aside. Reduce the oven temperature to 170ºC/325ºF/gas 3.</li>
+<li>Add the cloves and flour to the veg, stirring well to combine, then pour in the tomatoes and porter (or wine, if using). Add the oxtail and any roasting juices, cover with the beef stock or 1 litre of cold water and stir well.</li>
+<li>Turn the heat up to high and bring to the boil, then pop the lid on and place in the hot oven for around 5 hours, or until the meat falls away from the bone, stirring every hour or so and adding a splash of water to loosen, if needed.</li>
+<li>Remove the pan from the oven and leave to cool for about 10 minutes. Using rubber gloves, strip the meat from the bones and return to the pan, discarding the bones.</li>
+<li>Add a good splash of Worcestershire sauce, season to taste and enjoy with creamy mash and seasonal steamed greens.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e89f26" class="outline-2">
+<h2 id="org2e89f26"><span class="section-number-2">23</span> Pork belly slow roast</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+<div id="outline-container-orgf591665" class="outline-3">
+<h3 id="orgf591665">Ingredients</h3>
+<div class="outline-text-3" id="text-orgf591665">
+<ul class="org-ul">
+<li>2 pounds pork belly with skin</li>
+<li>1 to 2 tablespoons extra virgin olive oil</li>
+<li>Dash Kosher salt</li>
+<li>Dash freshly ground black pepper</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96e876c" class="outline-3">
+<h3 id="org96e876c">Method</h3>
+<div class="outline-text-3" id="text-org96e876c">
+<ol class="org-ol">
+<li>Heat the oven to 180 C</li>
+<li>With a sharp knife, make several parallel cuts across the skin of the pork belly. Cut through the skin and fat but not into the meat. Place the cuts about 1/4-inch apart.</li>
+<li>Rub the pork all over with kosher salt and freshly ground black pepper. Drizzle with olive oil and rub that in.</li>
+<li>Place the pork on a rack in a baking pan, skin side up.</li>
+<li>Roast for 2 to 2 1/2 hours, or until the meat is very tender and falling apart. Increase the heat to 220 C and roast for about 20 minutes longer to crisp the skin more.</li>
+<li>Remove and let rest for 10 minutes before slicing.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b762f9" class="outline-2">
+<h2 id="org5b762f9"><span class="section-number-2">24</span> Baked Portobello Mushrooms</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+<div id="outline-container-org2ceb08c" class="outline-3">
+<h3 id="org2ceb08c">Ingredients</h3>
+<div class="outline-text-3" id="text-org2ceb08c">
+<ul class="org-ul">
+<li>2 large portabello mushrooms</li>
+<li>2 Tbsp. soy sauce use tamari if needed to be gluten free</li>
+<li>1 Tbsp. balsamic vinegar</li>
+<li>0.5 tsp. minced garlic</li>
+<li>0.25 tsp. minced or grated ginger root</li>
+<li>0.5 Tbsp. olive oil</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcbade21" class="outline-3">
+<h3 id="orgcbade21">Method</h3>
+<div class="outline-text-3" id="text-orgcbade21">
+<ol class="org-ol">
+<li>Preheat oven to 205°C.</li>
+<li>Find a baking dish that will fit both mushroom caps (tightly line dish in foil to make clean up easier if desired). Add all ingredients except mushroom caps and stir to create marinade.</li>
+<li>Add mushrooms and rub sauce onto them. Let sit for 15 minutes, stem side down.</li>
+<li>Once 15 minutes is up, rub mushrooms again with sauce before placing dish in the oven.</li>
+<li>Bake for 15 minutes. Remove and turn mushrooms over. If there is any sauce left in the pan, spoon it over the mushrooms. Continue baking another 5-15 minutes (exact cooking time will vary based on mushroom size).</li>
+<li>Remove mushrooms and let sit for 5 minutes before slicing and serving.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e52d49" class="outline-2">
+<h2 id="org6e52d49"><span class="section-number-2">25</span> Spaghetti Bolognese</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+<div id="outline-container-orgbf55a48" class="outline-3">
+<h3 id="orgbf55a48">Ingredients</h3>
+<div class="outline-text-3" id="text-orgbf55a48">
+<ul class="org-ul">
+<li>1 tbsp olive oil</li>
+<li>4 rashers smoked streaky bacon, finely chopped</li>
+<li>2 medium onions, finely chopped</li>
+<li>2 carrots, trimmed and finely chopped</li>
+<li>2 celery sticks, finely chopped</li>
+<li>2 garlic cloves, finely chopped</li>
+<li>2-3 sprigs rosemary</li>
+<li>Rosemary, leaves picked and finely chopped</li>
+<li>500g beef mince</li>
+<li>2 x 400g tins chopped tomatoes</li>
+<li>small pack basil, leaves picked, ¾ finely chopped and the rest left whole for garnish</li>
+<li>1 tsp dried oregano</li>
+<li>2 fresh bay leaves</li>
+<li>2 tbsp tomato purée</li>
+<li>1 beef stock pot</li>
+<li>A dash of Worcestershire sauce</li>
+<li>1 red chilli, deseeded and finely chopped (optional)</li>
+<li>125ml red wine</li>
+<li>6 cherry tomatoes, sliced in half</li>
+<li>400g spaghetti</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e62665" class="outline-3">
+<h3 id="org9e62665">Method</h3>
+<div class="outline-text-3" id="text-org9e62665">
+<ol class="org-ol">
+<li>Put a large saucepan on a medium heat and add 1 tbsp olive oil.</li>
+<li>Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.</li>
+<li>Reduce the heat and add the 2 onions, 2 carrots, 2 celery sticks, 2 garlic cloves and the leaves from 2-3 sprigs rosemary, all finely chopped, then fry for 10 mins. Stir the veg often until it softens.</li>
+<li>Increase the heat to medium-high, add 500g beef mince and cook stirring for 3-4 mins until the meat is browned all over.</li>
+<li>Add 2 tins plum tomatoes, the finely chopped leaves from ¾ small pack basil, 1 tsp dried oregano, 2 bay leaves, 2 tbsp tomato purée, 1 beef stock pot, 1 deseeded and finely chopped red chilli (if using), 125ml red wine and 6 halved cherry tomatoes, and the Worcestershire sause.</li>
+<li>Stir with a wooden spoon</li>
+<li>Bring to the boil, reduce to a gentle simmer and cover with a lid. Cook for 1 hr 15 mins stirring occasionally, until you have a rich, thick sauce.</li>
+<li>When the bolognese is nearly finished, cook 400g spaghetti following the pack instructions.</li>
+<li>Drain the spaghetti and stir into the bolognese sauce.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org078028d" class="outline-2">
+<h2 id="org078028d"><span class="section-number-2">26</span> Peppered mackeral fishcakes</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+<div id="outline-container-orge4f5301" class="outline-3">
+<h3 id="orge4f5301">Ingredients</h3>
+<div class="outline-text-3" id="text-orge4f5301">
+<ul class="org-ul">
+<li>300g cold mashed potato</li>
+<li>6 spring onions, thinly sliced</li>
+<li>1 tbsp horseradish sauce</li>
+<li>250g / 9oz peppered mackerel fillets, skinned and flaked</li>
+<li>2 tbsp plain flour</li>
+<li>1 egg, beaten</li>
+<li>85g dried breadcrumbs</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a65feb" class="outline-3">
+<h3 id="org2a65feb">Method</h3>
+<div class="outline-text-3" id="text-org2a65feb">
+<ol class="org-ol">
+<li>In a large bowl, mix together the potato, spring onions, horseradish and mackerel, then shape into 8 even-size cakes. Roll the fishcakes in the flour, shaking off any excess, then dip in the egg, followed by the breadcrumbs. Cover and chill until ready to cook. Can be prepared up to a day ahead, or frozen.</li>
+<li>Gently grill or shallow-fry the fishcakes for 5-6 mins on each side until crunchy, golden brown and hot all the way through. Serve with salad and lemon wedges.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org1ae786d" class="outline-2">
+<h2 id="org1ae786d"><span class="section-number-2">27</span> Sausage and bean casserole</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+<div id="outline-container-org5693c66" class="outline-3">
+<h3 id="org5693c66">Ingredients</h3>
+<div class="outline-text-3" id="text-org5693c66">
+<ul class="org-ul">
+<li>2 tbsp olive or rapeseed oil</li>
+<li>1 onion, finely chopped</li>
+<li>2 medium sticks celery, finely chopped</li>
+<li>1 yellow pepper, chopped</li>
+<li>1 red pepper, chopped</li>
+<li>6 cooking chorizo sausages (about 400g)</li>
+<li>6 pork sausages (about 400g)</li>
+<li>3 fat garlic cloves, chopped</li>
+<li>1½ tsp sweet smoked paprika</li>
+<li>½ tsp ground cumin</li>
+<li>1 tbsp dried thyme</li>
+<li>125ml white wine</li>
+<li>2 x 400g cans cherry tomatoes or chopped tomatoes</li>
+<li>2 sprigs fresh thyme</li>
+<li>1 chicken stock cube</li>
+<li>1 x 400g can aduki beans, drained and rinsed</li>
+<li>1 bunch chives, snipped (optional)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org429977c" class="outline-3">
+<h3 id="org429977c">Method</h3>
+<div class="outline-text-3" id="text-org429977c">
+<ol class="org-ol">
+<li>Heat 2 tbsp olive or rapeseed oil in a large heavy-based pan.</li>
+<li>Add 1 finely chopped onion and cook gently for 5 minutes.</li>
+<li>Add 2 finely chopped medium celery sticks, 1 chopped yellow pepper and 1 chopped red pepper and cook for a further 5 mins.</li>
+<li>Add 6 chorizo sausages and 6 pork sausages and fry for 5 minutes.</li>
+<li>Stir in 3 chopped garlic cloves, 1 ½ tsp sweet smoked paprika, ½ tsp ground  cumin and 1 tbsp dried thyme and continue cooking for 1 – 2 mins or until the aromas are released.</li>
+<li>Pour in 125ml white wine and use a wooden spoon to remove any residue stuck to the pan.</li>
+<li>Add two 400g cans of tomatoes, and 2 sprigs of fresh thyme and bring to a simmer. Crumble in the chicken stock cube and stir.</li>
+<li>Cook for 40 minutes. Stir in a 400g drained and rinsed can of aduki beans and cook for a further five minutes.</li>
+<li>Remove the thyme sprigs, season with black pepper and stir through some snipped chives, if using. Serve.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org452d980" class="outline-2">
+<h2 id="org452d980"><span class="section-number-2">28</span> Braised Leeks</h2>
+<div class="outline-text-2" id="text-28">
+</div>
+<div id="outline-container-orgcb80ca7" class="outline-3">
+<h3 id="orgcb80ca7">Ingredients</h3>
+<div class="outline-text-3" id="text-orgcb80ca7">
+<ul class="org-ul">
+<li>6-8 leeks</li>
+<li>1 tsp olive oil</li>
+<li>2 tsp coriander seeds</li>
+<li>3 thyme sprigs</li>
+<li>2 bay leaves</li>
+<li>125ml white wine</li>
+<li>1 garlic clove with the skin on, bashed</li>
+<li>pinch caster sugar</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44be16c" class="outline-3">
+<h3 id="org44be16c">Method</h3>
+<div class="outline-text-3" id="text-org44be16c">
+<ol class="org-ol">
+<li>Trim the darkest green part off the leeks and strip away the first two layers. Cut in half lengthways, but keep attached at the root. Wash the leeks under cold running water and set aside.</li>
+<li>Tip all the other ingredients into a wide shallow pan with 200ml water, some cracked pepper and a sprinkling of salt.</li>
+<li>Slip the leeks into the pan, cover and place over a low heat. Gently simmer for 20 mins, turning them occasionally until very tender – a knife blade should slip in easily.</li>
+<li>Leave to cool until just warm, then stir through the parsley and olives, if you like. Serve the leeks as they are with crusty bread or with roast chicken or fish</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org1412528" class="outline-2">
+<h2 id="org1412528"><span class="section-number-2">29</span> Fried Green Beans</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+<div id="outline-container-org50df745" class="outline-3">
+<h3 id="org50df745">Ingredients</h3>
+<div class="outline-text-3" id="text-org50df745">
+<ul class="org-ul">
+<li>2 tbsp sunflower oil</li>
+<li>200g pack trimmed green beans</li>
+<li>3 garlic cloves, finely sliced</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41ce4e4" class="outline-3">
+<h3 id="org41ce4e4">Method</h3>
+<div class="outline-text-3" id="text-org41ce4e4">
+<ol class="org-ol">
+<li>Heat the oil in a wok, then stir-fry the green beans for 5 mins until they start to brown. Add the garlic and continue to cook until just tinged brown, then splash in the oyster sauce and serve.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org1f5fc06" class="outline-2">
+<h2 id="org1f5fc06"><span class="section-number-2">30</span> Tuna Steaks (Mediterranean)</h2>
+<div class="outline-text-2" id="text-30">
+</div>
+<div id="outline-container-org4f857fd" class="outline-3">
+<h3 id="org4f857fd">Ingredients</h3>
+<div class="outline-text-3" id="text-org4f857fd">
+<ul class="org-ul">
+<li>6 tbsp good-quality olive oil</li>
+<li>1 large yellow onion chopped</li>
+<li>3 cloves garlic 2 minced and 1 crushed</li>
+<li>1 cup Roma tomatoes I love San Marzano, drained and chopped</li>
+<li>8 fresh basil leaves roughly chopped</li>
+<li>2 tbsp fresh flat-leaf parsley chopped, plus more for garnish</li>
+<li>4 tuna steaks each about 1/2 lb</li>
+<li>Kosher or Sea salt and freshly ground pepper</li>
+<li>1 cup pitted black olives left whole, or, sliced/chopped</li>
+<li>4 tsp capers rinsed</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org689c935" class="outline-3">
+<h3 id="org689c935">Method</h3>
+<div class="outline-text-3" id="text-org689c935">
+<ol class="org-ol">
+<li>In a large skillet over medium heat, warm 3 tablespoons of the olive oil.</li>
+<li>Add the onion and saute until it begins to soften, about 3 minutes.</li>
+<li>Add the minced garlic and saute until golden, about 2 minutes longer.</li>
+<li>Stir in the tomatoes, basil and 2 tablespoons of the parsley and cook, uncovered, stirring occasionally, until slightly thickened, about 15 minutes.</li>
+<li>Remove from heat and set aside.</li>
+<li>Lightly season the tuna steaks on both sides with salt and pepper.</li>
+<li>In another skillet, large enough to hold the fish in a single layer, warm the remaining 3 tablespoons olive oil over medium heat.</li>
+<li>Add the crushed garlic and cook, stirring often, until golden, about 2 minutes. Remove and discard the garlic.</li>
+<li>Add the tuna steaks to the skillet, raise the heat to medium-high, and cook, turning once, until lightly browned on both sides, about 2 - 3 minutes per side.</li>
+<li>Pour the reserved sauce directly over the fish, reduce the heat to low, and add the olives and capers, and cook for another 5 minutes (sauce will thicken a little more).</li>
+<li>Transfer tuna steaks and sauce to plates and garnish with parsley.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org5116738" class="outline-2">
+<h2 id="org5116738"><span class="section-number-2">31</span> BBQ Pork Ribs</h2>
+<div class="outline-text-2" id="text-31">
+</div>
+<div id="outline-container-org7641531" class="outline-3">
+<h3 id="org7641531">Ingredients</h3>
+<div class="outline-text-3" id="text-org7641531">
+</div>
+<div id="outline-container-org0183e72" class="outline-4">
+<h4 id="org0183e72">BARBECUE RUB FOR RIBS:</h4>
+<div class="outline-text-4" id="text-org0183e72">
+<ul class="org-ul">
+<li>2.5 tsp paprika powder</li>
+<li>2 tsp garlic powder (sub with onion powder)</li>
+<li>1.5 tsp onion powder (sub with garlic powder)</li>
+<li>1 tsp cayenne pepper (omit for not spicy)</li>
+<li>1.5 tsp dried thyme</li>
+<li>1.5 tsp dried oregano</li>
+<li>1.5 tsp salt</li>
+<li>0.5 tsp black pepper</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdb930ca" class="outline-4">
+<h4 id="orgdb930ca">RIBS</h4>
+<div class="outline-text-4" id="text-orgdb930ca">
+<ul class="org-ul">
+<li>2 - 2.5kg / 4 - 5lb pork ribs (2 racks)</li>
+<li>3/4 cup (185ml) sweet alcoholic apple cider</li>
+<li>1 tbsp olive oil</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4934b5" class="outline-4">
+<h4 id="orge4934b5">HOMEMADE BARBECUE SAUCE</h4>
+<div class="outline-text-4" id="text-orge4934b5">
+<ul class="org-ul">
+<li>1/2 cup (125ml) apple cider vinegar (Note 3)</li>
+<li>1 1/2 cups tomato ketchup (or Aussie tomato sauce)</li>
+<li>1/2 cup (125ml) water (or use remaining apple cider!)</li>
+<li>1.5 tbsp molasses , orginal (not blackstrap, Note 4)</li>
+<li>1/3 cup brown sugar</li>
+<li>2 tsp mustard powder</li>
+<li>1.5 tsp garlic powder</li>
+<li>2 tsp Worcestershire sauce</li>
+<li>1 tsp salt</li>
+<li>1 tsp black pepper</li>
+<li>1 tsp Tabasco or cayenne pepper (optional, for spiciness)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc49c998" class="outline-3">
+<h3 id="orgc49c998">Method</h3>
+<div class="outline-text-3" id="text-orgc49c998">
+<ul class="org-ul">
+<li>Combine the Rub ingredients and rub onto both sides of the ribs (most on meaty side). Set aside to marinate for 20 minutes (or overnight).</li>
+<li>Preheat oven to 160°C/320°F (all oven types).</li>
+<li>Place ribs on a tray in a single layer. Pour apple cider underneath the ribs, cover with foil then bake for 1 hour 30 minutes or until the meat is pretty tender (Note 5).</li>
+<li>Remove from oven, turn up to 180°C/350°F. Remove foil, drizzle with olive oil, then return ribs to oven for 15 minutes or until rub becomes nice and crusty.</li>
+<li>Line a new tray with foil then baking / parchment paper (you'll thank me later).</li>
+<li>Remove ribs from oven, transfer to lined tray. Pour any juices from tray over the ribs.</li>
+<li>Flip ribs so the bonier side is up. Slather with Barbecue Sauce, then bake 10 minutes.</li>
+<li>Remove from oven, then turn ribs over so the meaty side is up. Slather with Barbecue Sauce, bake 5 minutes. Repeat 2 or 3 more times until you've got a thick glaze on the ribs.</li>
+<li>Cut ribs into individual or multiple rib portions and serve with remaining Barbcue Sauce!</li>
+</ul>
+</div>
+<div id="outline-container-orgd50029b" class="outline-4">
+<h4 id="orgd50029b">BARBECUE SAUCE</h4>
+<div class="outline-text-4" id="text-orgd50029b">
+<ul class="org-ul">
+<li>Place all ingredients in a saucepan and simmer over medium heat, stirring occasionally, for 45 minutes or until thickened.</li>
+<li>Adjust to taste: sweetness with brown sugar / honey, salt and sour with vinegar. Use for glazing ribs and as a sauce for serving.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Marc Scott</p>
-<p class="date">Created: 2019-10-08 Tue 14:55</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
